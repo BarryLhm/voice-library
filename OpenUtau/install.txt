@@ -1,0 +1,4 @@
+type=voiceset
+folder=BarryLhm
+contentsdir=BarryLhm
+description=BarryLhm single Japanese voice library
