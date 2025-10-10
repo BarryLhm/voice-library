@@ -2,7 +2,7 @@ name=BarryLhm
 image=avatar.png
 sample=BarryLhm_single\_わ.wav
 -----------------------------:
-web=https://codeberg.org/BarryLhm/
+web=https://codeberg.org/BarryLhm/voice-library
 releasedate=2025-10-07
 BarryLhm single Japanese vocal library
 (C) BarryLhm 2025 All Rights Reserved.
