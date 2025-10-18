@@ -1,0 +1,7 @@
+name=eSpeak
+image=lips.png
+sample=eSpeak_single\all.wav
+-----------------------------:
+web=https://codeberg.org/BarryLhm/voice-library
+eSpeak voice library
+license=GPL-3.0

@@ -1,0 +1,4 @@
+type=voiceset
+folder=eSpeak
+contentsdir=eSpeak
+description=eSpeak voice library
