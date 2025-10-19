@@ -1,6 +1,6 @@
 name=eSpeak
 image=lips.png
-sample=eSpeak_single\all.wav
+sample=eSpeak_single\わ.wav
 -----------------------------:
 web=https://codeberg.org/BarryLhm/voice-library
 eSpeak voice library
