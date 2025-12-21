@@ -1,0 +1,4 @@
+name=nina
+sample=out\わ.wav
+-----------------------------:
+web=https://codeberg.org/BarryLhm/voice-library

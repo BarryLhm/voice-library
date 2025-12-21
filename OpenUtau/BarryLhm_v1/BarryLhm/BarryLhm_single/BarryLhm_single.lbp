@@ -1,0 +1,1239 @@
+{
+    "version": 4,
+    "rootSampleDirectory": "/home/barrylhm/proj/by-me/voice-library/OpenUtau/BarryLhm_v1/BarryLhm/BarryLhm_single",
+    "workingDirectory": "",
+    "projectName": "BarryLhm_single",
+    "cacheDirectory": "BarryLhm_single.lbp.caches",
+    "labelerConf": {
+        "name": "utau-singer.default",
+        "version": 25,
+        "serialVersion": 2,
+        "singleFile": false,
+        "extension": "ini",
+        "defaultInputFilePath": null,
+        "displayedName": {
+            "en": "UTAU singer labeler",
+            "zh": "UTAU singer 标注器",
+            "ja": "UTAU singer ラベラー",
+            "ko": "UTAU singer 라벨러"
+        },
+        "author": "sdercolin",
+        "email": "sder.colin@gmail.com",
+        "description": {
+            "en": "Default labeler for UTAU singer (multiple pitches). `oto.ini` files under every folder that contains sample voices will be created/edited. Please set the sample directory to the root directory of the singer.",
+            "zh": "用于 UTAU singer（多音阶）的默认标注器。会在包含采样音频的每个文件夹下创建/编辑 `oto.ini` 文件。请将采样目录设置为歌手的根目录。",
+            "ja": "UTAU 音源（多音階）のデフォルトラベラーです。サンプル音声を含むフォルダーの中に `oto.ini` ファイルを作成/編集します。サンプルディレクトリを歌手のルートディレクトリに設定してください。",
+            "ko": "기본 내장된 UTAU 다음계 음원용 라벨러에요. 샘플 폴더는 가수의 루트 폴더로 지정해 주세요. 샘플이 존재하는 모든 하위 폴더마다 `oto.ini`가 생성되며, 라벨러를 통해 편집할 수 있게 됩니다."
+        },
+        "website": "https://github.com/sdercolin/vlabeler/tree/main/resources/common/labelers/utau-singer-labeler",
+        "categoryTag": "UTAU",
+        "displayOrder": 0,
+        "continuous": false,
+        "allowSameNameEntry": false,
+        "defaultEntryName": null,
+        "defaultValues": [
+            100.0,
+            400.0,
+            300.0,
+            200.0,
+            100.0,
+            500.0
+        ],
+        "defaultExtras": null,
+        "fields": [
+            {
+                "name": "fixed",
+                "label": {
+                    "en": "Fixed",
+                    "zh": "固",
+                    "ja": "子",
+                    "ko": "고정"
+                },
+                "color": "#1b51ff",
+                "height": 0.5,
+                "dragBase": false,
+                "filling": "left",
+                "constraints": [
+                    {
+                        "min": 3,
+                        "max": null
+                    }
+                ],
+                "shortcutIndex": 3,
+                "replaceStart": false,
+                "replaceEnd": false,
+                "triggerPostEditNext": false,
+                "triggerPostEditDone": true
+            },
+            {
+                "name": "preu",
+                "label": {
+                    "en": "Preu",
+                    "zh": "先",
+                    "ja": "先",
+                    "ko": "선행"
+                },
+                "color": "#ff1a45",
+                "height": 0.6667,
+                "dragBase": true,
+                "filling": null,
+                "constraints": [
+                    {
+                        "min": 3,
+                        "max": 0
+                    }
+                ],
+                "shortcutIndex": 2,
+                "replaceStart": false,
+                "replaceEnd": false,
+                "triggerPostEditNext": false,
+                "triggerPostEditDone": true
+            },
+            {
+                "name": "ovl",
+                "label": {
+                    "en": "Ovl",
+                    "zh": "重",
+                    "ja": "オ",
+                    "ko": "오버"
+                },
+                "color": "#7fff39",
+                "height": 0.8333,
+                "dragBase": false,
+                "filling": null,
+                "constraints": [
+                    {
+                        "min": null,
+                        "max": 0
+                    }
+                ],
+                "shortcutIndex": 1,
+                "replaceStart": false,
+                "replaceEnd": false,
+                "triggerPostEditNext": false,
+                "triggerPostEditDone": true
+            },
+            {
+                "name": "left",
+                "label": {
+                    "en": "Left",
+                    "zh": "左",
+                    "ja": "左",
+                    "ko": "왼쪽"
+                },
+                "color": "#9c7212",
+                "height": 0.9,
+                "dragBase": false,
+                "filling": "start",
+                "constraints": [
+                ],
+                "shortcutIndex": null,
+                "replaceStart": true,
+                "replaceEnd": false,
+                "triggerPostEditNext": false,
+                "triggerPostEditDone": false
+            }
+        ],
+        "extraFieldNames": null,
+        "extraFields": [
+            {
+                "name": "rawRight",
+                "default": "500",
+                "displayedName": "Raw right",
+                "isVisible": false,
+                "isEditable": false,
+                "isOptional": false
+            }
+        ],
+        "moduleExtraFields": [
+        ],
+        "lockedDrag": {
+            "useDragBase": true,
+            "useStart": false
+        },
+        "overflowBeforeStart": "AdjustBorder",
+        "overflowAfterEnd": "AdjustBorder",
+        "postEditNextTrigger": {
+            "useStart": false,
+            "useEnd": false
+        },
+        "postEditDoneTrigger": {
+            "useStart": true,
+            "useEnd": true
+        },
+        "decimalDigit": 2,
+        "entrySimilarityWeights": {
+            "name": 6.0,
+            "sample": 12.0,
+            "start": 1.0,
+            "end": 1.0,
+            "points": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "extras": [
+                0.0
+            ],
+            "tag": 0.0,
+            "threshold": 0.75
+        },
+        "properties": [
+            {
+                "name": "left",
+                "displayedName": {
+                    "en": "Offset",
+                    "zh": "左边界",
+                    "ja": "左ブランク",
+                    "ko": "오프셋"
+                },
+                "valueGetter": [
+                    "value = entry.points[3]",
+                    ""
+                ],
+                "valueSetter": [
+                    "entry.points[3] = value",
+                    "if (value < entry.start) {",
+                    "    entry.start = value",
+                    "}",
+                    ""
+                ],
+                "shortcutIndex": 0
+            },
+            {
+                "name": "ovl",
+                "displayedName": {
+                    "en": "Overlap",
+                    "zh": "重叠",
+                    "ja": "オーバーラップ",
+                    "ko": "오버랩"
+                },
+                "valueGetter": [
+                    "value = entry.points[2] - entry.points[3]",
+                    ""
+                ],
+                "valueSetter": [
+                    "newOverlap = value + entry.points[3]",
+                    "entry.points[2] = newOverlap",
+                    "if (newOverlap < entry.start) {",
+                    "    entry.start = newOverlap",
+                    "}",
+                    ""
+                ],
+                "shortcutIndex": 1
+            },
+            {
+                "name": "preu",
+                "displayedName": {
+                    "en": "Preutterance",
+                    "zh": "先行发声",
+                    "ja": "先行発声",
+                    "ko": "선행자음부"
+                },
+                "valueGetter": [
+                    "value = entry.points[1] - entry.points[3]",
+                    ""
+                ],
+                "valueSetter": [
+                    "entry.points[1] = value + entry.points[3]",
+                    ""
+                ],
+                "shortcutIndex": 2
+            },
+            {
+                "name": "fixed",
+                "displayedName": {
+                    "en": "Fixed",
+                    "zh": "固定",
+                    "ja": "固定範囲",
+                    "ko": "고정자음부"
+                },
+                "valueGetter": [
+                    "value = entry.points[0] - entry.points[3]",
+                    ""
+                ],
+                "valueSetter": [
+                    "entry.points[0] = value + entry.points[3]",
+                    ""
+                ],
+                "shortcutIndex": 3
+            },
+            {
+                "name": "right",
+                "displayedName": {
+                    "en": "Cutoff",
+                    "zh": "右边界",
+                    "ja": "右ブランク",
+                    "ko": "컷오프"
+                },
+                "valueGetter": [
+                    "if (entry.needSync || entry.end < 0) {",
+                    "    value = parseFloat(entry.extras[0])",
+                    "} else {",
+                    "    value = entry.points[3] - entry.end",
+                    "}",
+                    ""
+                ],
+                "valueSetter": [
+                    "if (value < 0) {",
+                    "    entry.end = -value + entry.points[3]",
+                    "} else {",
+                    "    entry.needSync = true",
+                    "    entry.end = -value",
+                    "    entry.extras[0] = value.toString()",
+                    "}",
+                    ""
+                ],
+                "shortcutIndex": 4
+            }
+        ],
+        "parser": {
+            "scope": "Entry",
+            "defaultEncoding": "Shift-JIS",
+            "extractionPattern": "(.*)=(.*),(.*),(.*),(.*),(.*),(.*)",
+            "variableNames": [
+                "sample",
+                "name",
+                "left",
+                "fixed",
+                "right",
+                "preu",
+                "ovl"
+            ],
+            "scripts": [
+                "if (typeof sample === 'undefined' || !sample) {",
+                "    error('Sample name is empty.')",
+                "}",
+                "if (typeof sample === 'undefined' || !name) {",
+                "    name = getNameWithoutExtension(sample)",
+                "}",
+                "offset = 0",
+                "if (ovl === '') {",
+                "    ovl = '0'",
+                "}",
+                "ovl = parseFloat(ovl)",
+                "if (ovl < 0) {",
+                "    offset = -ovl",
+                "}",
+                "if (left === '') {",
+                "    left = '0'",
+                "}",
+                "left = parseFloat(left)",
+                "start = left - offset",
+                "points = []",
+                "extras = []",
+                "if (fixed === '') {",
+                "    fixed = '0'",
+                "}",
+                "fixed = parseFloat(fixed)",
+                "if (fixed < 0) {",
+                "    fixed = 0",
+                "}",
+                "points.push(fixed + left)",
+                "if (right === '') {",
+                "    right = '0'",
+                "}",
+                "right = parseFloat(right)",
+                "rawRight = right // for restoring from a non-negative value (distance to sample end)",
+                "extras.push(rawRight)",
+                "if (right < 0) {",
+                "    end = left - right",
+                "} else {",
+                "    end = -right",
+                "}",
+                "if (preu === '') {",
+                "    preu = '0'",
+                "}",
+                "preu = parseFloat(preu)",
+                "if (preu < 0) {",
+                "    preu = 0",
+                "}",
+                "points.push(preu + left)",
+                "points.push(ovl + left)",
+                "points.push(left)",
+                "needSync = right >= 0",
+                "entry = new Entry(sample, name, start, end, points, extras, new Notes(), needSync)",
+                ""
+            ]
+        },
+        "writer": {
+            "scope": "Entry",
+            "format": "{sample}={name},{left},{fixed},{right},{preu},{ovl}",
+            "scripts": null
+        },
+        "parameters": [
+            {
+                "parameter": {
+                    "type": "boolean",
+                    "name": "useNegativeOvl",
+                    "label": {
+                        "en": "Allow negative overlap",
+                        "zh": "允许重叠为负值",
+                        "ja": "オーバーラップのマイナス値を許容する",
+                        "ko": "오버랩 음수값 허용하기"
+                    },
+                    "description": null,
+                    "enableIf": null,
+                    "defaultValue": true
+                },
+                "injector": [
+                    "labeler.fields[2].constraints[0].min = value ? null : 3",
+                    ""
+                ],
+                "changeable": true
+            },
+            {
+                "parameter": {
+                    "type": "enum",
+                    "name": "dragBase",
+                    "label": {
+                        "en": "Base for fixed-drag",
+                        "zh": "锁定拖动的基准参数",
+                        "ja": "連動ドラッグの基準",
+                        "ko": "고정 드래그의 기준 마커"
+                    },
+                    "description": null,
+                    "enableIf": null,
+                    "defaultValue": "Preutterance",
+                    "options": [
+                        "Left",
+                        "Overlap",
+                        "Preutterance",
+                        "Fixed"
+                    ],
+                    "optionDisplayedNames": [
+                        {
+                            "en": "Left",
+                            "zh": "左边界",
+                            "ja": "左ブランク",
+                            "ko": "왼쪽 끝"
+                        },
+                        {
+                            "en": "Overlap",
+                            "zh": "重叠",
+                            "ja": "オーバーラップ",
+                            "ko": "오버랩"
+                        },
+                        {
+                            "en": "Preutterance",
+                            "zh": "先行发声",
+                            "ja": "先行発声",
+                            "ko": "선행자음부"
+                        },
+                        {
+                            "en": "Fixed",
+                            "zh": "固定",
+                            "ja": "固定範囲",
+                            "ko": "고정자음부"
+                        }
+                    ]
+                },
+                "injector": [
+                    "if (value !== 'Preutterance') {",
+                    "    labeler.fields[1].dragBase = false",
+                    "}",
+                    "if (value === 'Fixed') {",
+                    "    labeler.fields[0].dragBase = true",
+                    "}",
+                    "if (value === 'Overlap') {",
+                    "    labeler.fields[2].dragBase = true",
+                    "}",
+                    "if (value === 'Left') {",
+                    "    labeler.lockedDrag.useDragBase = false",
+                    "    labeler.lockedDrag.useStart = true",
+                    "}",
+                    ""
+                ],
+                "changeable": true
+            },
+            {
+                "parameter": {
+                    "type": "boolean",
+                    "name": "useRootDirectory",
+                    "label": {
+                        "en": "Include samples under the root directory of the singer",
+                        "zh": "包括歌手根目录下的采样",
+                        "ja": "歌手のルートディレクトリ以下のサンプルを含める",
+                        "ko": "편집이 끝나면 다음 엔트리로 이동"
+                    },
+                    "description": null,
+                    "enableIf": null,
+                    "defaultValue": false
+                },
+                "injector": null,
+                "changeable": false
+            },
+            {
+                "parameter": {
+                    "type": "boolean",
+                    "name": "forceRecursive",
+                    "label": {
+                        "en": "Include children of child directories",
+                        "zh": "包括子文件夹的子文件夹",
+                        "ja": "子ディレクトリの子を含める",
+                        "ko": "하위 폴더 내부의 폴더까지 포함하기"
+                    },
+                    "description": {
+                        "en": "By default, only direct children of the root directory will be included due to restriction of UTAU. If you have samples in folders whose depth is greater than 1, please enable this option.",
+                        "zh": "由于 UTAU 的限制，默认情况下只有根目录的直接子文件夹会被包括。如果您的采样文件夹的深度大于 1，请启用此选项。",
+                        "ja": "UTAUの制限により、デフォルトではルートディレクトリの直接の子のみが含まれます。深さが1より大きいフォルダーにサンプルがある場合は、このオプションを有効にしてください。",
+                        "ko": "UTAU의 경우, 제약이 있어 한 겹의 하위 폴더까지만 포함시킬 수 있어요. 한 겹을 넘어가는 하위 폴더에 있는 샘플들을 편집해야 한다면, 이 항목을 활성화해 주세요. "
+                    },
+                    "enableIf": null,
+                    "defaultValue": false
+                },
+                "injector": null,
+                "changeable": false
+            },
+            {
+                "parameter": {
+                    "type": "enum",
+                    "name": "postEditNextTrigger",
+                    "label": {
+                        "en": "Go to next entry after editing",
+                        "zh": "编辑后跳转到下一个条目",
+                        "ja": "編集後に次のエントリーに移動する",
+                        "ko": "편집이 끝나면 다음 엔트리로 이동"
+                    },
+                    "description": {
+                        "en": "Please enable this action in `Preferences` -> `Editor` -> `Post-editing actions`, and choose `Use settings defined by the labeler` as the trigger.",
+                        "zh": "请在`环境设置`->`编辑器`->`编辑后动作`中启用此功能，并选择`使用标注器的设置`为`触发该行为的参数`。",
+                        "ja": "`環境設定`->`エディタ`->`編集後アクション`でこの機能を有効にし、`アクションを実行できるパラメータ`では`ラベラーの設定`を選択してください。",
+                        "ko": "활성화하려면 `환경설정` -> `에디터` -> `사전편집 동작`을 누른 후, `라벨러에 의해 정의된 설정 사용`을 선택해 주세요."
+                    },
+                    "enableIf": null,
+                    "defaultValue": "Disable",
+                    "options": [
+                        "Disable",
+                        "Left",
+                        "Overlap",
+                        "Preutterance",
+                        "Fixed",
+                        "Cutoff",
+                        "Any"
+                    ],
+                    "optionDisplayedNames": [
+                        {
+                            "en": "Disable",
+                            "zh": "禁用",
+                            "ja": "無効",
+                            "ko": "비활성"
+                        },
+                        {
+                            "en": "Left",
+                            "zh": "左边界",
+                            "ja": "左ブランク",
+                            "ko": "왼쪽 끝"
+                        },
+                        {
+                            "en": "Overlap",
+                            "zh": "重叠",
+                            "ja": "オーバーラップ",
+                            "ko": "오버랩"
+                        },
+                        {
+                            "en": "Preutterance",
+                            "zh": "先行发声",
+                            "ja": "先行発声",
+                            "ko": "선행자음부"
+                        },
+                        {
+                            "en": "Fixed",
+                            "zh": "固定",
+                            "ja": "固定範囲",
+                            "ko": "고정자음부"
+                        },
+                        {
+                            "en": "Cutoff",
+                            "zh": "右边界",
+                            "ja": "右ブランク",
+                            "ko": "컷오프"
+                        },
+                        {
+                            "en": "Any",
+                            "zh": "任意",
+                            "ja": "任意",
+                            "ko": "아무거나"
+                        }
+                    ]
+                },
+                "injector": [
+                    "if (value === 'Left') {",
+                    "    labeler.postEditNextTrigger = {'useStart': true}",
+                    "}",
+                    "if (value === 'Fixed') {",
+                    "    labeler.fields[0].triggerPostEditNext = true",
+                    "}",
+                    "if (value === 'Preutterance') {",
+                    "    labeler.fields[1].triggerPostEditNext = true",
+                    "}",
+                    "if (value === 'Overlap') {",
+                    "    labeler.fields[2].triggerPostEditNext = true",
+                    "}",
+                    "if (value === 'Cutoff') {",
+                    "    labeler.postEditNextTrigger = {'useEnd': true}",
+                    "}",
+                    "if (value === 'Any') {",
+                    "    labeler.postEditNextTrigger = {'useStart': true, 'useEnd': true}",
+                    "    labeler.fields[0].triggerPostEditNext = true",
+                    "    labeler.fields[1].triggerPostEditNext = true",
+                    "    labeler.fields[2].triggerPostEditNext = true",
+                    "}",
+                    ""
+                ],
+                "changeable": true
+            },
+            {
+                "parameter": {
+                    "type": "enum",
+                    "name": "postEditDoneTrigger",
+                    "label": {
+                        "en": "Mark entry as `Done` after editing",
+                        "zh": "编辑后标记为已完成条目",
+                        "ja": "編集後にエントリーを\"完了\"にする",
+                        "ko": "편집된 엔트리에 자동으로 \"완료\" 표시"
+                    },
+                    "description": {
+                        "en": "Please enable this action in `Preferences` -> `Editor` -> `Post-editing actions`, and choose `Use settings defined by the labeler` as the trigger.",
+                        "zh": "请在`环境设置`->`编辑器`->`编辑后动作`中启用此功能，并选择`使用标注器的设置`为`触发该行为的参数`。",
+                        "ja": "`環境設定`->`エディタ`->`編集後アクション`でこの機能を有効にし、`アクションを実行できるパラメータ`では`ラベラーの設定`を選択してください。",
+                        "ko": "활성화하려면 `환경설정` -> `에디터` -> `사전편집 동작`을 누른 후, `라벨러에 의해 정의된 설정 사용`을 선택해 주세요."
+                    },
+                    "enableIf": null,
+                    "defaultValue": "Any",
+                    "options": [
+                        "Disable",
+                        "Left",
+                        "Overlap",
+                        "Preutterance",
+                        "Fixed",
+                        "Cutoff",
+                        "Any"
+                    ],
+                    "optionDisplayedNames": [
+                        {
+                            "en": "Disable",
+                            "zh": "禁用",
+                            "ja": "無効",
+                            "ko": "비활성"
+                        },
+                        {
+                            "en": "Left",
+                            "zh": "左边界",
+                            "ja": "左ブランク",
+                            "ko": "왼쪽 끝"
+                        },
+                        {
+                            "en": "Overlap",
+                            "zh": "重叠",
+                            "ja": "オーバーラップ",
+                            "ko": "오버랩"
+                        },
+                        {
+                            "en": "Preutterance",
+                            "zh": "先行发声",
+                            "ja": "先行発声",
+                            "ko": "선행자음부"
+                        },
+                        {
+                            "en": "Fixed",
+                            "zh": "固定",
+                            "ja": "固定範囲",
+                            "ko": "고정자음부"
+                        },
+                        {
+                            "en": "Cutoff",
+                            "zh": "右边界",
+                            "ja": "右ブランク",
+                            "ko": "컷오프"
+                        },
+                        {
+                            "en": "Any",
+                            "zh": "任意",
+                            "ja": "任意",
+                            "ko": "아무거나"
+                        }
+                    ]
+                },
+                "injector": [
+                    "if (value === 'Disable') {",
+                    "    labeler.postEditDoneTrigger = {}",
+                    "    labeler.fields[0].triggerPostEditDone = false",
+                    "    labeler.fields[1].triggerPostEditDone = false",
+                    "    labeler.fields[2].triggerPostEditDone = false",
+                    "}",
+                    "if (value === 'Left') {",
+                    "    labeler.postEditDoneTrigger = {'useStart': true}",
+                    "    labeler.fields[0].triggerPostEditDone = false",
+                    "    labeler.fields[1].triggerPostEditDone = false",
+                    "    labeler.fields[2].triggerPostEditDone = false",
+                    "}",
+                    "if (value === 'Fixed') {",
+                    "    labeler.postEditDoneTrigger = {}",
+                    "    labeler.fields[1].triggerPostEditDone = false",
+                    "    labeler.fields[2].triggerPostEditDone = false",
+                    "}",
+                    "if (value === 'Preutterance') {",
+                    "    labeler.postEditDoneTrigger = {}",
+                    "    labeler.fields[0].triggerPostEditDone = false",
+                    "    labeler.fields[2].triggerPostEditDone = false",
+                    "}",
+                    "if (value === 'Overlap') {",
+                    "    labeler.postEditDoneTrigger = {}",
+                    "    labeler.fields[0].triggerPostEditDone = false",
+                    "    labeler.fields[1].triggerPostEditDone = false",
+                    "}",
+                    "if (value === 'Cutoff') {",
+                    "    labeler.postEditDoneTrigger = {'useEnd': true}",
+                    "    labeler.fields[0].triggerPostEditDone = false",
+                    "    labeler.fields[1].triggerPostEditDone = false",
+                    "    labeler.fields[2].triggerPostEditDone = false",
+                    "}",
+                    ""
+                ],
+                "changeable": true
+            }
+        ],
+        "projectConstructor": {
+            "scripts": [
+                "// `root` is the input File object indicating the root sample directory.",
+                "// `acceptedSampleExtensions` is provided as list of strings indicating the accepted extensions of sample files",
+                "let modules = []",
+                "let rootModule = null",
+                "",
+                "function putFolder(folder, parentPath, depth) {",
+                "    let thisName = depth === 0 ? '' : (depth === 1 ? folder.getName() : parentPath + '/' + folder.getName())",
+                "    let samples = folder.listChildFiles().filter(file => acceptedSampleExtensions.includes(file.getExtension()))",
+                "    if (samples.length > 0) {",
+                "        let otoFile = folder.resolve('oto.ini')",
+                "        let otoPath = otoFile.getAbsolutePath()",
+                "        let def = new ModuleDefinition(",
+                "                thisName,",
+                "                folder.getAbsolutePath(),",
+                "                samples.map(f => f.getName()),",
+                "                [otoPath],",
+                "                otoPath",
+                "        )",
+                "        let included = true",
+                "        if (depth === 0) {",
+                "            included = params['useRootDirectory']",
+                "            rootModule = def",
+                "        }",
+                "        if (depth > 1) {",
+                "            included = otoFile.exists() || params['forceRecursive']",
+                "        }",
+                "        if (included) {",
+                "            modules.push(def)",
+                "        }",
+                "    }",
+                "    folder.listChildDirectories().forEach(f => putFolder(f, thisName, depth + 1))",
+                "}",
+                "",
+                "putFolder(root, '', 0)",
+                "if (rootModule && modules.length === 0) {",
+                "    modules.push(rootModule)",
+                "}",
+                "if (modules.length === 0) {",
+                "    error({",
+                "        en: 'No sample files found. Please check the labeler settings to ensure your sample folders are included.',",
+                "        zh: '未找到采样文件。请检查标注器设置以确保您的采样文件夹被包括在内。',",
+                "        ja: 'サンプルファイルが見つかりませんでした。ラベラーの設定でサンプルフォルダーが含まれていることを確認してください。',",
+                "        ko: '샘플 파일을 찾지 못했습니다. 라벨러 설정에서 샘플 폴더가 잘 포함되어 있는지 확인해 주세요.'",
+                "    })",
+                "}",
+                ""
+            ]
+        },
+        "quickProjectBuilders": [
+            {
+                "name": "default",
+                "displayedName": {
+                    "en": "Edit UTAU singer",
+                    "zh": "编辑 UTAU singer",
+                    "ja": "UTAU singer を編集する",
+                    "ko": "UTAU singer 파일 편집"
+                },
+                "description": {
+                    "en": "Select your UTAU singer folder to start quick editing.",
+                    "zh": "选择您的 UTAU singer 文件夹以开始快捷编辑。",
+                    "ja": "UTAU singer フォルダーを選択して、クイック編集を開始します。",
+                    "ko": "UTAU singer 폴더를 선택하여 빠른 편집을 시작하세요."
+                },
+                "extension": "",
+                "scripts": [
+                    "console.log(\"input=\", JSON.stringify(input))",
+                    "console.log(\"savedParams=\", JSON.stringify(savedParams))",
+                    "",
+                    "sampleDirectory = input",
+                    "projectName = sampleDirectory.getName() + \"_quickedit.lbp\"",
+                    "projectFile = sampleDirectory.resolve(projectName)",
+                    "encoding = \"Shift-JIS\"",
+                    ""
+                ]
+            }
+        ],
+        "resourceFiles": [
+        ]
+    },
+    "labelerParams": null,
+    "encoding": "UTF-8",
+    "multipleEditMode": false,
+    "modules": [
+        {
+            "name": "",
+            "sampleDirectory": "",
+            "entries": [
+                {
+                    "sample": "_��.wav",
+                    "name": "��",
+                    "start": 0.0,
+                    "end": 1300.68,
+                    "points": [
+                        1300.68,
+                        74.83,
+                        12.56,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1300.68"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_����.wav",
+                    "name": "����",
+                    "start": 0.0,
+                    "end": 1106.12,
+                    "points": [
+                        1106.12,
+                        28.57,
+                        26.08,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1106.12"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_��.wav",
+                    "name": "��",
+                    "start": 0.0,
+                    "end": 1181.41,
+                    "points": [
+                        1181.41,
+                        133.33,
+                        34.01,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1181.41"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_�Ă�.wav",
+                    "name": "�Ă�",
+                    "start": 0.0,
+                    "end": 1239.0,
+                    "points": [
+                        1239.0,
+                        54.42,
+                        11.34,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1239"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_�ł�.wav",
+                    "name": "�ł�",
+                    "start": 0.0,
+                    "end": 1191.84,
+                    "points": [
+                        1191.84,
+                        31.29,
+                        9.07,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1191.84"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_�Ƃ�.wav",
+                    "name": "�Ƃ�",
+                    "start": 0.0,
+                    "end": 1139.23,
+                    "points": [
+                        1139.23,
+                        65.31,
+                        13.61,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1139.23"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_�ǂ�.wav",
+                    "name": "�ǂ�",
+                    "start": 0.0,
+                    "end": 1230.84,
+                    "points": [
+                        1230.84,
+                        38.1,
+                        10.2,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1230.84"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_�ɂ�.wav",
+                    "name": "�ɂ�",
+                    "start": 0.0,
+                    "end": 1068.03,
+                    "points": [
+                        1068.03,
+                        85.71,
+                        73.7,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1068.03"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_�Ђ�.wav",
+                    "name": "�Ђ�",
+                    "start": 0.0,
+                    "end": 1270.75,
+                    "points": [
+                        1270.75,
+                        50.34,
+                        7.94,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1270.75"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_�т�.wav",
+                    "name": "�т�",
+                    "start": 0.0,
+                    "end": 1107.48,
+                    "points": [
+                        1107.48,
+                        38.1,
+                        14.74,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1107.48"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_�҂�.wav",
+                    "name": "�҂�",
+                    "start": 0.0,
+                    "end": 1414.97,
+                    "points": [
+                        1414.97,
+                        74.83,
+                        0.0,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1414.97"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_�ӂ�.wav",
+                    "name": "�ӂ�",
+                    "start": 0.0,
+                    "end": 1195.47,
+                    "points": [
+                        1195.47,
+                        119.73,
+                        70.0,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1195.47"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_�݂�.wav",
+                    "name": "�݂�",
+                    "start": 0.0,
+                    "end": 1188.21,
+                    "points": [
+                        1188.21,
+                        61.22,
+                        29.48,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1188.21"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_�肥.wav",
+                    "name": "�肥",
+                    "start": 0.0,
+                    "end": 1087.07,
+                    "points": [
+                        1087.07,
+                        61.22,
+                        6.8,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1087.07"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_���.wav",
+                    "name": "���",
+                    "start": 0.0,
+                    "end": 1175.51,
+                    "points": [
+                        1175.51,
+                        61.22,
+                        11.34,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1175.51"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_�K.wav",
+                    "name": "�K",
+                    "start": 0.0,
+                    "end": 986.85,
+                    "points": [
+                        986.85,
+                        35.37,
+                        6.8,
+                        0.0
+                    ],
+                    "extras": [
+                        "-986.85"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_�M.wav",
+                    "name": "�M",
+                    "start": 0.0,
+                    "end": 1061.22,
+                    "points": [
+                        1061.22,
+                        32.65,
+                        5.44,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1061.22"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_�M��.wav",
+                    "name": "�M��",
+                    "start": 0.0,
+                    "end": 1508.39,
+                    "points": [
+                        1508.39,
+                        36.73,
+                        2.72,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1508.39"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_�O.wav",
+                    "name": "�O",
+                    "start": 0.0,
+                    "end": 1365.99,
+                    "points": [
+                        1365.99,
+                        38.1,
+                        8.16,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1365.99"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_�Q.wav",
+                    "name": "�Q",
+                    "start": 0.0,
+                    "end": 1095.99,
+                    "points": [
+                        1095.99,
+                        31.29,
+                        5.44,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1095.99"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_�S.wav",
+                    "name": "�S",
+                    "start": 0.0,
+                    "end": 1146.49,
+                    "points": [
+                        1146.49,
+                        32.65,
+                        5.44,
+                        0.0
+                    ],
+                    "extras": [
+                        "-1146.49"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                }
+            ],
+            "currentIndex": 0,
+            "extras": {
+            },
+            "rawFilePath": "oto.ini",
+            "entryFilter": null
+        }
+    ],
+    "currentModuleIndex": 0,
+    "autoExport": false,
+    "entryFilter": null
+}
