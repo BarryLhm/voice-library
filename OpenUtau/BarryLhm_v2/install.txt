@@ -1,0 +1,4 @@
+type=voiceset
+folder=BarryLhm_V2
+contentsdir=BarryLhm_V2
+description=BarryLhm voice library 2.0

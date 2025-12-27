@@ -1,0 +1,10 @@
+name: BarryLhm V2
+localized_names:
+  zh-CN: 巴里 @ 神秘小声库
+singer_type: utau
+text_file_encoding: utf-8
+image: avatar.png
+author: BarryLhm
+voice: BarryLhm
+version: 2.0
+web: https://codeberg.org/BarryLhm/voice-library
