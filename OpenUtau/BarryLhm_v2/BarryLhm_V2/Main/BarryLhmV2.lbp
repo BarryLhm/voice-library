@@ -1,0 +1,5991 @@
+{
+    "version": 4,
+    "rootSampleDirectory": "/home/barrylhm/.local/share/OpenUtau/Singers/BarryLhm_V2/Main",
+    "workingDirectory": "",
+    "projectName": "BarryLhmV2",
+    "cacheDirectory": "BarryLhmV2.lbp.caches",
+    "labelerConf": {
+        "name": "oto-plus.default",
+        "version": 30,
+        "serialVersion": 2,
+        "singleFile": false,
+        "extension": "ini",
+        "defaultInputFilePath": "oto.ini",
+        "displayedName": {
+            "en": "UTAU oto labeler",
+            "zh": "UTAU oto 标注器",
+            "ja": "UTAU oto ラベラー",
+            "ko": "UTAU oto 라벨러"
+        },
+        "author": "sdercolin",
+        "email": "sder.colin@gmail.com",
+        "description": {
+            "en": "Default labeler for UTAU oto.",
+            "zh": "用于 UTAU oto 的默认标注器。",
+            "ja": "UTAU oto のデフォルトラベラー。",
+            "ko": "기본 내장된 UTAU oto용 라벨러에요."
+        },
+        "website": "https://github.com/sdercolin/vlabeler/tree/main/resources/common/labelers",
+        "categoryTag": "UTAU",
+        "displayOrder": 1,
+        "continuous": false,
+        "allowSameNameEntry": false,
+        "defaultEntryName": null,
+        "defaultValues": [
+            100.0,
+            400.0,
+            300.0,
+            200.0,
+            100.0,
+            500.0
+        ],
+        "defaultExtras": null,
+        "fields": [
+            {
+                "name": "fixed",
+                "label": {
+                    "en": "Fixed",
+                    "zh": "固",
+                    "ja": "子",
+                    "ko": "고정"
+                },
+                "color": "#1b51ff",
+                "height": 0.5,
+                "dragBase": false,
+                "filling": "left",
+                "constraints": [
+                    {
+                        "min": 3,
+                        "max": null
+                    }
+                ],
+                "shortcutIndex": 3,
+                "replaceStart": false,
+                "replaceEnd": false,
+                "triggerPostEditNext": false,
+                "triggerPostEditDone": true
+            },
+            {
+                "name": "preu",
+                "label": {
+                    "en": "Preu",
+                    "zh": "先",
+                    "ja": "先",
+                    "ko": "선행"
+                },
+                "color": "#ff1a45",
+                "height": 0.6667,
+                "dragBase": true,
+                "filling": null,
+                "constraints": [
+                    {
+                        "min": 3,
+                        "max": 0
+                    }
+                ],
+                "shortcutIndex": 2,
+                "replaceStart": false,
+                "replaceEnd": false,
+                "triggerPostEditNext": false,
+                "triggerPostEditDone": true
+            },
+            {
+                "name": "ovl",
+                "label": {
+                    "en": "Ovl",
+                    "zh": "重",
+                    "ja": "オ",
+                    "ko": "오버"
+                },
+                "color": "#7fff39",
+                "height": 0.8333,
+                "dragBase": false,
+                "filling": null,
+                "constraints": [
+                    {
+                        "min": null,
+                        "max": 0
+                    }
+                ],
+                "shortcutIndex": 1,
+                "replaceStart": false,
+                "replaceEnd": false,
+                "triggerPostEditNext": false,
+                "triggerPostEditDone": true
+            },
+            {
+                "name": "left",
+                "label": {
+                    "en": "Left",
+                    "zh": "左",
+                    "ja": "左",
+                    "ko": "왼쪽"
+                },
+                "color": "#9c7212",
+                "height": 0.9,
+                "dragBase": false,
+                "filling": "start",
+                "constraints": [
+                ],
+                "shortcutIndex": null,
+                "replaceStart": true,
+                "replaceEnd": false,
+                "triggerPostEditNext": false,
+                "triggerPostEditDone": false
+            }
+        ],
+        "extraFieldNames": [
+            "rawRight"
+        ],
+        "extraFields": [
+            {
+                "name": "rawRight",
+                "default": "500",
+                "displayedName": "Raw right",
+                "isVisible": false,
+                "isEditable": false,
+                "isOptional": false
+            }
+        ],
+        "moduleExtraFields": [
+        ],
+        "lockedDrag": {
+            "useDragBase": true,
+            "useStart": false
+        },
+        "overflowBeforeStart": "AdjustBorder",
+        "overflowAfterEnd": "AdjustBorder",
+        "postEditNextTrigger": {
+            "useStart": false,
+            "useEnd": false
+        },
+        "postEditDoneTrigger": {
+            "useStart": true,
+            "useEnd": true
+        },
+        "decimalDigit": 2,
+        "entrySimilarityWeights": {
+            "name": 6.0,
+            "sample": 12.0,
+            "start": 1.0,
+            "end": 1.0,
+            "points": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "extras": [
+                0.0
+            ],
+            "tag": 0.0,
+            "threshold": 0.75
+        },
+        "properties": [
+            {
+                "name": "left",
+                "displayedName": {
+                    "en": "Offset",
+                    "zh": "左边界",
+                    "ja": "左ブランク",
+                    "ko": "오프셋"
+                },
+                "valueGetter": [
+                    "value = entry.points[3]",
+                    ""
+                ],
+                "valueSetter": [
+                    "entry.points[3] = value",
+                    "if (value < entry.start) {",
+                    "    entry.start = value",
+                    "}",
+                    ""
+                ],
+                "shortcutIndex": 0
+            },
+            {
+                "name": "ovl",
+                "displayedName": {
+                    "en": "Overlap",
+                    "zh": "重叠",
+                    "ja": "オーバーラップ",
+                    "ko": "오버랩"
+                },
+                "valueGetter": [
+                    "value = entry.points[2] - entry.points[3]",
+                    ""
+                ],
+                "valueSetter": [
+                    "newOverlap = value + entry.points[3]",
+                    "entry.points[2] = newOverlap",
+                    "if (newOverlap < entry.start) {",
+                    "    entry.start = newOverlap",
+                    "}",
+                    ""
+                ],
+                "shortcutIndex": 1
+            },
+            {
+                "name": "preu",
+                "displayedName": {
+                    "en": "Preutterance",
+                    "zh": "先行发声",
+                    "ja": "先行発声",
+                    "ko": "선행자음부"
+                },
+                "valueGetter": [
+                    "value = entry.points[1] - entry.points[3]",
+                    ""
+                ],
+                "valueSetter": [
+                    "entry.points[1] = value + entry.points[3]",
+                    ""
+                ],
+                "shortcutIndex": 2
+            },
+            {
+                "name": "fixed",
+                "displayedName": {
+                    "en": "Fixed",
+                    "zh": "固定",
+                    "ja": "固定範囲",
+                    "ko": "고정자음부"
+                },
+                "valueGetter": [
+                    "value = entry.points[0] - entry.points[3]",
+                    ""
+                ],
+                "valueSetter": [
+                    "entry.points[0] = value + entry.points[3]",
+                    ""
+                ],
+                "shortcutIndex": 3
+            },
+            {
+                "name": "right",
+                "displayedName": {
+                    "en": "Cutoff",
+                    "zh": "右边界",
+                    "ja": "右ブランク",
+                    "ko": "컷오프"
+                },
+                "valueGetter": [
+                    "if (entry.needSync || entry.end < 0) {",
+                    "    value = parseFloat(entry.extras[0])",
+                    "} else {",
+                    "    value = entry.points[3] - entry.end",
+                    "}",
+                    ""
+                ],
+                "valueSetter": [
+                    "if (value < 0) {",
+                    "    entry.end = -value + entry.points[3]",
+                    "} else {",
+                    "    entry.needSync = true",
+                    "    entry.end = -value",
+                    "    entry.extras[0] = value.toString()",
+                    "}",
+                    ""
+                ],
+                "shortcutIndex": 4
+            }
+        ],
+        "parser": {
+            "scope": "Entry",
+            "defaultEncoding": "Shift-JIS",
+            "extractionPattern": "(.*)=(.*),(.*),(.*),(.*),(.*),(.*)",
+            "variableNames": [
+                "sample",
+                "name",
+                "left",
+                "fixed",
+                "right",
+                "preu",
+                "ovl"
+            ],
+            "scripts": [
+                "if (typeof sample === 'undefined' || !sample) {",
+                "    error('Sample name is empty.')",
+                "}",
+                "if (typeof sample === 'undefined' || !name) {",
+                "    name = getNameWithoutExtension(sample)",
+                "}",
+                "offset = 0",
+                "if (ovl === '') {",
+                "    ovl = '0'",
+                "}",
+                "ovl = parseFloat(ovl)",
+                "if (ovl < 0) {",
+                "    offset = -ovl",
+                "}",
+                "if (left === '') {",
+                "    left = '0'",
+                "}",
+                "left = parseFloat(left)",
+                "start = left - offset",
+                "points = []",
+                "extras = []",
+                "if (fixed === '') {",
+                "    fixed = '0'",
+                "}",
+                "fixed = parseFloat(fixed)",
+                "if (fixed < 0) {",
+                "    fixed = 0",
+                "}",
+                "points.push(fixed + left)",
+                "if (right === '') {",
+                "    right = '0'",
+                "}",
+                "right = parseFloat(right)",
+                "rawRight = right // for restoring from a non-negative value (distance to sample end)",
+                "extras.push(rawRight)",
+                "if (right < 0) {",
+                "    end = left - right",
+                "} else {",
+                "    end = -right",
+                "}",
+                "if (preu === '') {",
+                "    preu = '0'",
+                "}",
+                "preu = parseFloat(preu)",
+                "if (preu < 0) {",
+                "    preu = 0",
+                "}",
+                "points.push(preu + left)",
+                "points.push(ovl + left)",
+                "points.push(left)",
+                "needSync = right >= 0",
+                "entry = new Entry(sample, name, start, end, points, extras, new Notes(), needSync)",
+                ""
+            ]
+        },
+        "writer": {
+            "scope": "Entry",
+            "format": "{sample}={name},{left},{fixed},{right},{preu},{ovl}",
+            "scripts": null
+        },
+        "parameters": [
+            {
+                "parameter": {
+                    "type": "boolean",
+                    "name": "useNegativeOvl",
+                    "label": {
+                        "en": "Allow negative overlap",
+                        "zh": "允许重叠为负值",
+                        "ja": "オーバーラップのマイナス値を許容する",
+                        "ko": "오버랩 음수값 허용하기"
+                    },
+                    "description": null,
+                    "enableIf": null,
+                    "defaultValue": true
+                },
+                "injector": [
+                    "labeler.fields[2].constraints[0].min = value ? null : 3",
+                    ""
+                ],
+                "changeable": true
+            },
+            {
+                "parameter": {
+                    "type": "enum",
+                    "name": "dragBase",
+                    "label": {
+                        "en": "Base for fixed-drag",
+                        "zh": "锁定拖动的基准参数",
+                        "ja": "連動ドラッグの基準",
+                        "ko": "고정 드래그의 기준 마커"
+                    },
+                    "description": null,
+                    "enableIf": null,
+                    "defaultValue": "Preutterance",
+                    "options": [
+                        "Left",
+                        "Overlap",
+                        "Preutterance",
+                        "Fixed"
+                    ],
+                    "optionDisplayedNames": [
+                        {
+                            "en": "Left",
+                            "zh": "左边界",
+                            "ja": "左ブランク",
+                            "ko": "왼쪽 끝"
+                        },
+                        {
+                            "en": "Overlap",
+                            "zh": "重叠",
+                            "ja": "オーバーラップ",
+                            "ko": "오버랩"
+                        },
+                        {
+                            "en": "Preutterance",
+                            "zh": "先行发声",
+                            "ja": "先行発声",
+                            "ko": "선행자음부"
+                        },
+                        {
+                            "en": "Fixed",
+                            "zh": "固定",
+                            "ja": "固定範囲",
+                            "ko": "고정자음부"
+                        }
+                    ]
+                },
+                "injector": [
+                    "if (value !== 'Preutterance') {",
+                    "    labeler.fields[1].dragBase = false",
+                    "}",
+                    "if (value === 'Fixed') {",
+                    "    labeler.fields[0].dragBase = true",
+                    "}",
+                    "if (value === 'Overlap') {",
+                    "    labeler.fields[2].dragBase = true",
+                    "}",
+                    "if (value === 'Left') {",
+                    "    labeler.lockedDrag.useDragBase = false",
+                    "    labeler.lockedDrag.useStart = true",
+                    "}",
+                    ""
+                ],
+                "changeable": true
+            },
+            {
+                "parameter": {
+                    "type": "enum",
+                    "name": "postEditNextTrigger",
+                    "label": {
+                        "en": "Go to next entry after editing",
+                        "zh": "编辑后跳转到下一个条目",
+                        "ja": "編集後に次のエントリーに移動する",
+                        "ko": "편집이 끝나면 다음 엔트리로 이동"
+                    },
+                    "description": {
+                        "en": "Please enable this action in `Preferences` -> `Editor` -> `Post-editing actions`, and choose `Use settings defined by the labeler` as the trigger.",
+                        "zh": "请在`环境设置`->`编辑器`->`编辑后动作`中启用此功能，并选择`使用标注器的设置`为`触发该行为的参数`。",
+                        "ja": "`環境設定`->`エディタ`->`編集後アクション`でこの機能を有効にし、`アクションを実行できるパラメータ`では`ラベラーの設定`を選択してください。",
+                        "ko": "활성화하려면 `환경설정` -> `에디터` -> `사전편집 동작`을 누른 후, `라벨러에 의해 정의된 설정 사용`을 선택해 주세요."
+                    },
+                    "enableIf": null,
+                    "defaultValue": "Disable",
+                    "options": [
+                        "Disable",
+                        "Left",
+                        "Overlap",
+                        "Preutterance",
+                        "Fixed",
+                        "Cutoff",
+                        "Any"
+                    ],
+                    "optionDisplayedNames": [
+                        {
+                            "en": "Disable",
+                            "zh": "禁用",
+                            "ja": "無効",
+                            "ko": "비활성"
+                        },
+                        {
+                            "en": "Left",
+                            "zh": "左边界",
+                            "ja": "左ブランク",
+                            "ko": "왼쪽 끝"
+                        },
+                        {
+                            "en": "Overlap",
+                            "zh": "重叠",
+                            "ja": "オーバーラップ",
+                            "ko": "오버랩"
+                        },
+                        {
+                            "en": "Preutterance",
+                            "zh": "先行发声",
+                            "ja": "先行発声",
+                            "ko": "선행자음부"
+                        },
+                        {
+                            "en": "Fixed",
+                            "zh": "固定",
+                            "ja": "固定範囲",
+                            "ko": "고정자음부"
+                        },
+                        {
+                            "en": "Cutoff",
+                            "zh": "右边界",
+                            "ja": "右ブランク",
+                            "ko": "컷오프"
+                        },
+                        {
+                            "en": "Any",
+                            "zh": "任意",
+                            "ja": "任意",
+                            "ko": "아무거나"
+                        }
+                    ]
+                },
+                "injector": [
+                    "if (value === 'Left') {",
+                    "    labeler.postEditNextTrigger = {'useStart': true}",
+                    "}",
+                    "if (value === 'Fixed') {",
+                    "    labeler.fields[0].triggerPostEditNext = true",
+                    "}",
+                    "if (value === 'Preutterance') {",
+                    "    labeler.fields[1].triggerPostEditNext = true",
+                    "}",
+                    "if (value === 'Overlap') {",
+                    "    labeler.fields[2].triggerPostEditNext = true",
+                    "}",
+                    "if (value === 'Cutoff') {",
+                    "    labeler.postEditNextTrigger = {'useEnd': true}",
+                    "}",
+                    "if (value === 'Any') {",
+                    "    labeler.postEditNextTrigger = {'useStart': true, 'useEnd': true}",
+                    "    labeler.fields[0].triggerPostEditNext = true",
+                    "    labeler.fields[1].triggerPostEditNext = true",
+                    "    labeler.fields[2].triggerPostEditNext = true",
+                    "}",
+                    ""
+                ],
+                "changeable": true
+            },
+            {
+                "parameter": {
+                    "type": "enum",
+                    "name": "postEditDoneTrigger",
+                    "label": {
+                        "en": "Mark entry as `Done` after editing",
+                        "zh": "编辑后标记为已完成条目",
+                        "ja": "編集後にエントリーを\"完了\"にする",
+                        "ko": "편집된 엔트리에 자동으로 \"완료\" 표시"
+                    },
+                    "description": {
+                        "en": "Please enable this action in `Preferences` -> `Editor` -> `Post-editing actions`, and choose `Use settings defined by the labeler` as the trigger.",
+                        "zh": "请在`环境设置`->`编辑器`->`编辑后动作`中启用此功能，并选择`使用标注器的设置`为`触发该行为的参数`。",
+                        "ja": "`環境設定`->`エディタ`->`編集後アクション`でこの機能を有効にし、`アクションを実行できるパラメータ`では`ラベラーの設定`を選択してください。",
+                        "ko": "활성화하려면 `환경설정` -> `에디터` -> `사전편집 동작`을 누른 후, `라벨러에 의해 정의된 설정 사용`을 선택해 주세요."
+                    },
+                    "enableIf": null,
+                    "defaultValue": "Any",
+                    "options": [
+                        "Disable",
+                        "Left",
+                        "Overlap",
+                        "Preutterance",
+                        "Fixed",
+                        "Cutoff",
+                        "Any"
+                    ],
+                    "optionDisplayedNames": [
+                        {
+                            "en": "Disable",
+                            "zh": "禁用",
+                            "ja": "無効",
+                            "ko": "비활성"
+                        },
+                        {
+                            "en": "Left",
+                            "zh": "左边界",
+                            "ja": "左ブランク",
+                            "ko": "왼쪽 끝"
+                        },
+                        {
+                            "en": "Overlap",
+                            "zh": "重叠",
+                            "ja": "オーバーラップ",
+                            "ko": "오버랩"
+                        },
+                        {
+                            "en": "Preutterance",
+                            "zh": "先行发声",
+                            "ja": "先行発声",
+                            "ko": "선행자음부"
+                        },
+                        {
+                            "en": "Fixed",
+                            "zh": "固定",
+                            "ja": "固定範囲",
+                            "ko": "고정자음부"
+                        },
+                        {
+                            "en": "Cutoff",
+                            "zh": "右边界",
+                            "ja": "右ブランク",
+                            "ko": "컷오프"
+                        },
+                        {
+                            "en": "Any",
+                            "zh": "任意",
+                            "ja": "任意",
+                            "ko": "아무거나"
+                        }
+                    ]
+                },
+                "injector": [
+                    "if (value === 'Disable') {",
+                    "    labeler.postEditDoneTrigger = {}",
+                    "    labeler.fields[0].triggerPostEditDone = false",
+                    "    labeler.fields[1].triggerPostEditDone = false",
+                    "    labeler.fields[2].triggerPostEditDone = false",
+                    "}",
+                    "if (value === 'Left') {",
+                    "    labeler.postEditDoneTrigger = {'useStart': true}",
+                    "    labeler.fields[0].triggerPostEditDone = false",
+                    "    labeler.fields[1].triggerPostEditDone = false",
+                    "    labeler.fields[2].triggerPostEditDone = false",
+                    "}",
+                    "if (value === 'Fixed') {",
+                    "    labeler.postEditDoneTrigger = {}",
+                    "    labeler.fields[1].triggerPostEditDone = false",
+                    "    labeler.fields[2].triggerPostEditDone = false",
+                    "}",
+                    "if (value === 'Preutterance') {",
+                    "    labeler.postEditDoneTrigger = {}",
+                    "    labeler.fields[0].triggerPostEditDone = false",
+                    "    labeler.fields[2].triggerPostEditDone = false",
+                    "}",
+                    "if (value === 'Overlap') {",
+                    "    labeler.postEditDoneTrigger = {}",
+                    "    labeler.fields[0].triggerPostEditDone = false",
+                    "    labeler.fields[1].triggerPostEditDone = false",
+                    "}",
+                    "if (value === 'Cutoff') {",
+                    "    labeler.postEditDoneTrigger = {'useEnd': true}",
+                    "    labeler.fields[0].triggerPostEditDone = false",
+                    "    labeler.fields[1].triggerPostEditDone = false",
+                    "    labeler.fields[2].triggerPostEditDone = false",
+                    "}",
+                    ""
+                ],
+                "changeable": true
+            }
+        ],
+        "projectConstructor": null,
+        "quickProjectBuilders": [
+            {
+                "name": "default",
+                "displayedName": {
+                    "en": "Edit UTAU oto file",
+                    "zh": "编辑 UTAU oto 文件",
+                    "ja": "UTAU oto を編集する",
+                    "ko": "UTAU oto 파일 편집"
+                },
+                "description": {
+                    "en": "Select your UTAU oto file to start quick editing.",
+                    "zh": "选择您的 UTAU oto 文件以开始快捷编辑。",
+                    "ja": "UTAU oto ファイルを選択して、クイック編集を開始します。",
+                    "ko": "UTAU oto 파일을 선택하여 빠른 편집을 시작합니다."
+                },
+                "extension": "ini",
+                "scripts": [
+                    "console.log(\"input=\", JSON.stringify(input))",
+                    "console.log(\"savedParams=\", JSON.stringify(savedParams))",
+                    "",
+                    "sampleDirectory = input.getParentFile()",
+                    "inputName = input.getNameWithoutExtension()",
+                    "projectName = sampleDirectory.getName() + \"_\" + inputName + \"_quickedit.lbp\"",
+                    "projectFile = sampleDirectory.resolve(projectName)",
+                    "encoding = \"Shift-JIS\"",
+                    ""
+                ]
+            }
+        ],
+        "resourceFiles": [
+        ]
+    },
+    "labelerParams": {
+        "map": {
+            "postEditDoneTrigger": {
+                "type": "enum",
+                "value": "Cutoff"
+            }
+        }
+    },
+    "encoding": "UTF-8",
+    "multipleEditMode": false,
+    "modules": [
+        {
+            "name": "",
+            "sampleDirectory": "",
+            "entries": [
+                {
+                    "sample": "_あいうえお.wav",
+                    "name": "あ",
+                    "start": 648.52606,
+                    "end": 1195.02,
+                    "points": [
+                        731.9728,
+                        648.53,
+                        648.52606,
+                        648.53
+                    ],
+                    "extras": [
+                        "-546.49"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "Solo V"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_あいうえお.wav",
+                    "name": "い",
+                    "start": 1682.5397,
+                    "end": 2227.6643,
+                    "points": [
+                        1757.8231,
+                        1682.5397,
+                        1682.5397,
+                        1682.5397
+                    ],
+                    "extras": [
+                        "-336.67"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "Solo V"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_あいうえお.wav",
+                    "name": "う",
+                    "start": 2673.9229,
+                    "end": 3406.8027,
+                    "points": [
+                        2827.211,
+                        2673.9229,
+                        2673.9229,
+                        2673.9229
+                    ],
+                    "extras": [
+                        "-336.67"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "Solo V"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_あいうえお.wav",
+                    "name": "え",
+                    "start": 3873.9229,
+                    "end": 4551.474,
+                    "points": [
+                        3934.6938,
+                        3873.9229,
+                        3873.9229,
+                        3873.9229
+                    ],
+                    "extras": [
+                        "-336.67"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "Solo V"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_あいうえお.wav",
+                    "name": "お",
+                    "start": 5041.27,
+                    "end": 5780.499,
+                    "points": [
+                        5083.9004,
+                        5041.27,
+                        5041.27,
+                        5041.27
+                    ],
+                    "extras": [
+                        "-336.67"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "Solo V"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_きゃきゅきぇきょ.wav",
+                    "name": "きゃ",
+                    "start": 956.0091,
+                    "end": 1564.6259,
+                    "points": [
+                        1184.5804,
+                        1024.0363,
+                        1024.0363,
+                        956.0091
+                    ],
+                    "extras": [
+                        "-430"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "Head cv"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_きゃきゅきぇきょ.wav",
+                    "name": "きゅ",
+                    "start": 1854.8752,
+                    "end": 2540.5896,
+                    "points": [
+                        2059.864,
+                        1946.4852,
+                        1946.4852,
+                        1854.8752
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_きゃきゅきぇきょ.wav",
+                    "name": "きぇ",
+                    "start": 2762.8118,
+                    "end": 3426.7573,
+                    "points": [
+                        2940.5896,
+                        2861.678,
+                        2861.678,
+                        2762.8118
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_きゃきゅきぇきょ.wav",
+                    "name": "きょ",
+                    "start": 3652.6077,
+                    "end": 4407.2563,
+                    "points": [
+                        3801.3606,
+                        3742.4036,
+                        3742.4036,
+                        3652.6077
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_ぎゃぎゅぎぇぎょ.wav",
+                    "name": "ぎゃ",
+                    "start": 332.87982,
+                    "end": 900.6803,
+                    "points": [
+                        479.8186,
+                        360.99774,
+                        360.99774,
+                        332.87982
+                    ],
+                    "extras": [
+                        "-430"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "Head cv"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_ぎゃぎゅぎぇぎょ.wav",
+                    "name": "ぎゅ",
+                    "start": 1160.0907,
+                    "end": 1689.7959,
+                    "points": [
+                        1379.5918,
+                        1189.1156,
+                        1189.1156,
+                        1160.0907
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_ぎゃぎゅぎぇぎょ.wav",
+                    "name": "ぎぇ",
+                    "start": 2020.8617,
+                    "end": 2623.1292,
+                    "points": [
+                        2294.7847,
+                        2056.2358,
+                        2056.2358,
+                        2020.8617
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_ぎゃぎゅぎぇぎょ.wav",
+                    "name": "ぎょ",
+                    "start": 2836.2812,
+                    "end": 3484.8074,
+                    "points": [
+                        2995.011,
+                        2890.703,
+                        2890.703,
+                        2836.2812
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_くぁくぃくぇくぉ.wav",
+                    "name": "くぁ",
+                    "start": 449.88663,
+                    "end": 1063.9456,
+                    "points": [
+                        624.9433,
+                        503.40137,
+                        503.40137,
+                        449.88663
+                    ],
+                    "extras": [
+                        "-430"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_くぁくぃくぇくぉ.wav",
+                    "name": "くぃ",
+                    "start": 1385.941,
+                    "end": 2021.7687,
+                    "points": [
+                        1494.7845,
+                        1447.619,
+                        1447.619,
+                        1385.941
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_くぁくぃくぇくぉ.wav",
+                    "name": "くぇ",
+                    "start": 2289.3423,
+                    "end": 2968.7075,
+                    "points": [
+                        2453.5146,
+                        2352.8345,
+                        2352.8345,
+                        2289.3423
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_くぁくぃくぇくぉ.wav",
+                    "name": "くぉ",
+                    "start": 3220.8616,
+                    "end": 3940.136,
+                    "points": [
+                        3379.5918,
+                        3299.7732,
+                        3299.7732,
+                        3220.8616
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_ぐぁぐぃぐぇぐぉ.wav",
+                    "name": "ぐぁ",
+                    "start": 604.0816,
+                    "end": 1138.322,
+                    "points": [
+                        741.0431,
+                        630.3855,
+                        630.3855,
+                        604.0816
+                    ],
+                    "extras": [
+                        "-430"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_ぐぁぐぃぐぇぐぉ.wav",
+                    "name": "ぐぃ",
+                    "start": 1468.4807,
+                    "end": 1983.6735,
+                    "points": [
+                        1579.1383,
+                        1495.6917,
+                        1495.6917,
+                        1468.4807
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_ぐぁぐぃぐぇぐぉ.wav",
+                    "name": "ぐぇ",
+                    "start": 2397.2788,
+                    "end": 3002.2676,
+                    "points": [
+                        2547.8457,
+                        2427.211,
+                        2427.211,
+                        2397.2788
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_ぐぁぐぃぐぇぐぉ.wav",
+                    "name": "ぐぉ",
+                    "start": 3336.9614,
+                    "end": 4077.0974,
+                    "points": [
+                        3451.247,
+                        3373.2427,
+                        3373.2427,
+                        3336.9614
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_にゃにゅにぇにょ.wav",
+                    "name": "にゃ",
+                    "start": 657.5964,
+                    "end": 1282.5397,
+                    "points": [
+                        870.7483,
+                        701.1338,
+                        701.1338,
+                        657.5964
+                    ],
+                    "extras": [
+                        "-430"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_にゃにゅにぇにょ.wav",
+                    "name": "にゅ",
+                    "start": 1559.1837,
+                    "end": 2191.3833,
+                    "points": [
+                        1786.848,
+                        1591.8368,
+                        1591.8368,
+                        1559.1837
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_にゃにゅにぇにょ.wav",
+                    "name": "にぇ",
+                    "start": 2480.7256,
+                    "end": 3071.202,
+                    "points": [
+                        2648.5261,
+                        2506.1226,
+                        2506.1226,
+                        2480.7256
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_にゃにゅにぇにょ.wav",
+                    "name": "にょ",
+                    "start": 3345.1248,
+                    "end": 4031.746,
+                    "points": [
+                        3509.297,
+                        3388.662,
+                        3388.662,
+                        3345.1248
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_ひゃひゅひぇひょ.wav",
+                    "name": "ひゃ",
+                    "start": 557.8231,
+                    "end": 1081.1792,
+                    "points": [
+                        804.53516,
+                        633.10657,
+                        633.10657,
+                        557.8231
+                    ],
+                    "extras": [
+                        "-430"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_ひゃひゅひぇひょ.wav",
+                    "name": "ひゅ",
+                    "start": 1374.1497,
+                    "end": 1956.4625,
+                    "points": [
+                        1668.0272,
+                        1473.0159,
+                        1473.0159,
+                        1374.1497
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_ひゃひゅひぇひょ.wav",
+                    "name": "ひぇ",
+                    "start": 2212.2449,
+                    "end": 2808.1633,
+                    "points": [
+                        2455.3289,
+                        2284.8074,
+                        2284.8074,
+                        2212.2449
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_ひゃひゅひぇひょ.wav",
+                    "name": "ひょ",
+                    "start": 3118.3674,
+                    "end": 3814.966,
+                    "points": [
+                        3371.4285,
+                        3192.7437,
+                        3192.7437,
+                        3118.3674
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_びゃびゅびぇびょ.wav",
+                    "name": "びゃ",
+                    "start": 474.3764,
+                    "end": 948.7528,
+                    "points": [
+                        650.34015,
+                        483.44672,
+                        483.44672,
+                        474.3764
+                    ],
+                    "extras": [
+                        "-430"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_びゃびゅびぇびょ.wav",
+                    "name": "びゅ",
+                    "start": 1196.3718,
+                    "end": 1902.0408,
+                    "points": [
+                        1500.2269,
+                        1307.9365,
+                        1307.9365,
+                        1196.3718
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_びゃびゅびぇびょ.wav",
+                    "name": "びぇ",
+                    "start": 2159.6372,
+                    "end": 2778.2312,
+                    "points": [
+                        2375.5103,
+                        2169.6145,
+                        2169.6145,
+                        2159.6372
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_びゃびゅびぇびょ.wav",
+                    "name": "びょ",
+                    "start": 2985.034,
+                    "end": 3737.8684,
+                    "points": [
+                        3180.0454,
+                        3000.4539,
+                        3000.4539,
+                        2985.034
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_ぴゃぴゅぴぇぴょ.wav",
+                    "name": "ぴゅ",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_ぴゃぴゅぴぇぴょ.wav",
+                    "name": "ぴぇ",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_ぴゃぴゅぴぇぴょ.wav",
+                    "name": "ぴょ",
+                    "start": 1900.0,
+                    "end": 2420.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_みゃみゅみぇみょ.wav",
+                    "name": "みゃ",
+                    "start": 390.0,
+                    "end": 820.0,
+                    "points": [
+                        473.33,
+                        390.0,
+                        400.0,
+                        390.0
+                    ],
+                    "extras": [
+                        "-430"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_みゃみゅみぇみょ.wav",
+                    "name": "みゅ",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_みゃみゅみぇみょ.wav",
+                    "name": "みぇ",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_みゃみゅみぇみょ.wav",
+                    "name": "みょ",
+                    "start": 1900.0,
+                    "end": 2420.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_やゆいぇよてゅnR吸.wav",
+                    "name": "や",
+                    "start": 390.0,
+                    "end": 820.0,
+                    "points": [
+                        473.33,
+                        390.0,
+                        400.0,
+                        390.0
+                    ],
+                    "extras": [
+                        "-430"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_やゆいぇよてゅnR吸.wav",
+                    "name": "ゆ",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_やゆいぇよてゅnR吸.wav",
+                    "name": "いぇ",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_やゆいぇよてゅnR吸.wav",
+                    "name": "よ",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_やゆいぇよてゅnR吸.wav",
+                    "name": "てゅ",
+                    "start": 2400.0,
+                    "end": 2920.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_りゃりゅりぇりょ.wav",
+                    "name": "りゃ",
+                    "start": 390.0,
+                    "end": 820.0,
+                    "points": [
+                        473.33,
+                        390.0,
+                        400.0,
+                        390.0
+                    ],
+                    "extras": [
+                        "-430"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_りゃりゅりぇりょ.wav",
+                    "name": "りゅ",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_りゃりゅりぇりょ.wav",
+                    "name": "りぇ",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_りゃりゅりぇりょ.wav",
+                    "name": "りょ",
+                    "start": 1900.0,
+                    "end": 2420.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_わうぃうぇうぉでゅ.wav",
+                    "name": "わ",
+                    "start": 390.0,
+                    "end": 820.0,
+                    "points": [
+                        473.33,
+                        390.0,
+                        400.0,
+                        390.0
+                    ],
+                    "extras": [
+                        "-430"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_わうぃうぇうぉでゅ.wav",
+                    "name": "うぃ",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_わうぃうぇうぉでゅ.wav",
+                    "name": "うぇ",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_わうぃうぇうぉでゅ.wav",
+                    "name": "うぉ",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_わうぃうぇうぉでゅ.wav",
+                    "name": "でゅ",
+                    "start": 2400.0,
+                    "end": 2920.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んあんいんうんえんおんR.wav",
+                    "name": "ん",
+                    "start": 583.33,
+                    "end": 920.0,
+                    "points": [
+                        583.33,
+                        663.33,
+                        663.33,
+                        583.33
+                    ],
+                    "extras": [
+                        "-336.67"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "Solo V"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んあんいんうんえんおんR.wav",
+                    "name": "n あ",
+                    "start": 840.0,
+                    "end": 1420.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        920.0,
+                        840.0
+                    ],
+                    "extras": [
+                        "-580"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んあんいんうんえんおんR.wav",
+                    "name": "a ん",
+                    "start": 1340.0,
+                    "end": 1920.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1420.0,
+                        1340.0
+                    ],
+                    "extras": [
+                        "-580"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んあんいんうんえんおんR.wav",
+                    "name": "n い",
+                    "start": 1840.0,
+                    "end": 2420.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1920.0,
+                        1840.0
+                    ],
+                    "extras": [
+                        "-580"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んあんいんうんえんおんR.wav",
+                    "name": "i ん",
+                    "start": 2340.0,
+                    "end": 2920.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2420.0,
+                        2340.0
+                    ],
+                    "extras": [
+                        "-580"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んあんいんうんえんおんR.wav",
+                    "name": "n う",
+                    "start": 2840.0,
+                    "end": 3420.0,
+                    "points": [
+                        3083.33,
+                        3000.0,
+                        2920.0,
+                        2840.0
+                    ],
+                    "extras": [
+                        "-580"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んあんいんうんえんおんR.wav",
+                    "name": "u ん",
+                    "start": 3340.0,
+                    "end": 3920.0,
+                    "points": [
+                        3583.33,
+                        3500.0,
+                        3420.0,
+                        3340.0
+                    ],
+                    "extras": [
+                        "-580"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んあんいんうんえんおんR.wav",
+                    "name": "n え",
+                    "start": 3840.0,
+                    "end": 4420.0,
+                    "points": [
+                        4083.33,
+                        4000.0,
+                        3920.0,
+                        3840.0
+                    ],
+                    "extras": [
+                        "-580"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んあんいんうんえんおんR.wav",
+                    "name": "e ん",
+                    "start": 4340.0,
+                    "end": 4920.0,
+                    "points": [
+                        4583.33,
+                        4500.0,
+                        4420.0,
+                        4340.0
+                    ],
+                    "extras": [
+                        "-580"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んあんいんうんえんおんR.wav",
+                    "name": "n お",
+                    "start": 4840.0,
+                    "end": 5420.0,
+                    "points": [
+                        5083.33,
+                        5000.0,
+                        4920.0,
+                        4840.0
+                    ],
+                    "extras": [
+                        "-580"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んあんいんうんえんおんR.wav",
+                    "name": "o ん",
+                    "start": 5340.0,
+                    "end": 5920.0,
+                    "points": [
+                        5583.33,
+                        5500.0,
+                        5420.0,
+                        5340.0
+                    ],
+                    "extras": [
+                        "-580"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んあんいんうんえんおんR.wav",
+                    "name": "n R",
+                    "start": 5840.0,
+                    "end": 6020.0,
+                    "points": [
+                        6010.0,
+                        6000.0,
+                        5920.0,
+                        5840.0
+                    ],
+                    "extras": [
+                        "-180"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "Tail"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んかきくけこkaR.wav",
+                    "name": "n k",
+                    "start": 740.0,
+                    "end": 1000.0,
+                    "points": [
+                        910.0,
+                        900.0,
+                        820.0,
+                        740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んかきくけこkaR.wav",
+                    "name": "か",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んかきくけこkaR.wav",
+                    "name": "a k",
+                    "start": 1240.0,
+                    "end": 1500.0,
+                    "points": [
+                        1410.0,
+                        1400.0,
+                        1320.0,
+                        1240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んかきくけこkaR.wav",
+                    "name": "き",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んかきくけこkaR.wav",
+                    "name": "i k",
+                    "start": 1740.0,
+                    "end": 2000.0,
+                    "points": [
+                        1910.0,
+                        1900.0,
+                        1820.0,
+                        1740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んかきくけこkaR.wav",
+                    "name": "く",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んかきくけこkaR.wav",
+                    "name": "u k",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んかきくけこkaR.wav",
+                    "name": "け",
+                    "start": 2400.0,
+                    "end": 2820.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んかきくけこkaR.wav",
+                    "name": "e k",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んかきくけこkaR.wav",
+                    "name": "こ",
+                    "start": 2900.0,
+                    "end": 3420.0,
+                    "points": [
+                        3083.33,
+                        3000.0,
+                        2950.0,
+                        2900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んかきくけこkaR.wav",
+                    "name": "o k",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んがぎぐげごgiR.wav",
+                    "name": "n g",
+                    "start": 740.0,
+                    "end": 1000.0,
+                    "points": [
+                        910.0,
+                        900.0,
+                        820.0,
+                        740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んがぎぐげごgiR.wav",
+                    "name": "が",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んがぎぐげごgiR.wav",
+                    "name": "a g",
+                    "start": 1240.0,
+                    "end": 1500.0,
+                    "points": [
+                        1410.0,
+                        1400.0,
+                        1320.0,
+                        1240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んがぎぐげごgiR.wav",
+                    "name": "ぎ",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んがぎぐげごgiR.wav",
+                    "name": "i g",
+                    "start": 1740.0,
+                    "end": 2000.0,
+                    "points": [
+                        1910.0,
+                        1900.0,
+                        1820.0,
+                        1740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んがぎぐげごgiR.wav",
+                    "name": "ぐ",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んがぎぐげごgiR.wav",
+                    "name": "u g",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んがぎぐげごgiR.wav",
+                    "name": "げ",
+                    "start": 2400.0,
+                    "end": 2820.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んがぎぐげごgiR.wav",
+                    "name": "e g",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んがぎぐげごgiR.wav",
+                    "name": "ご",
+                    "start": 2900.0,
+                    "end": 3420.0,
+                    "points": [
+                        3083.33,
+                        3000.0,
+                        2950.0,
+                        2900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んがぎぐげごgiR.wav",
+                    "name": "o g",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んさすぃすせそsuR.wav",
+                    "name": "n s",
+                    "start": 740.0,
+                    "end": 1000.0,
+                    "points": [
+                        910.0,
+                        900.0,
+                        820.0,
+                        740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んさすぃすせそsuR.wav",
+                    "name": "さ",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んさすぃすせそsuR.wav",
+                    "name": "a s",
+                    "start": 1240.0,
+                    "end": 1500.0,
+                    "points": [
+                        1410.0,
+                        1400.0,
+                        1320.0,
+                        1240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んさすぃすせそsuR.wav",
+                    "name": "すぃ",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んさすぃすせそsuR.wav",
+                    "name": "i s",
+                    "start": 1740.0,
+                    "end": 2000.0,
+                    "points": [
+                        1910.0,
+                        1900.0,
+                        1820.0,
+                        1740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んさすぃすせそsuR.wav",
+                    "name": "す",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んさすぃすせそsuR.wav",
+                    "name": "u s",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んさすぃすせそsuR.wav",
+                    "name": "せ",
+                    "start": 2400.0,
+                    "end": 2820.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んさすぃすせそsuR.wav",
+                    "name": "e s",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んさすぃすせそsuR.wav",
+                    "name": "そ",
+                    "start": 2900.0,
+                    "end": 3420.0,
+                    "points": [
+                        3083.33,
+                        3000.0,
+                        2950.0,
+                        2900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んさすぃすせそsuR.wav",
+                    "name": "o s",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んざずぃずぜぞzeR.wav",
+                    "name": "n z",
+                    "start": 740.0,
+                    "end": 1000.0,
+                    "points": [
+                        910.0,
+                        900.0,
+                        820.0,
+                        740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んざずぃずぜぞzeR.wav",
+                    "name": "ざ",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んざずぃずぜぞzeR.wav",
+                    "name": "a z",
+                    "start": 1240.0,
+                    "end": 1500.0,
+                    "points": [
+                        1410.0,
+                        1400.0,
+                        1320.0,
+                        1240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んざずぃずぜぞzeR.wav",
+                    "name": "ずぃ",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んざずぃずぜぞzeR.wav",
+                    "name": "i z",
+                    "start": 1740.0,
+                    "end": 2000.0,
+                    "points": [
+                        1910.0,
+                        1900.0,
+                        1820.0,
+                        1740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んざずぃずぜぞzeR.wav",
+                    "name": "ず",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んざずぃずぜぞzeR.wav",
+                    "name": "u z",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んざずぃずぜぞzeR.wav",
+                    "name": "ぜ",
+                    "start": 2400.0,
+                    "end": 2820.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んざずぃずぜぞzeR.wav",
+                    "name": "e z",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んざずぃずぜぞzeR.wav",
+                    "name": "ぞ",
+                    "start": 2900.0,
+                    "end": 3420.0,
+                    "points": [
+                        3083.33,
+                        3000.0,
+                        2950.0,
+                        2900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んざずぃずぜぞzeR.wav",
+                    "name": "o z",
+                    "start": 2900.0,
+                    "end": 3420.0,
+                    "points": [
+                        3083.33,
+                        3000.0,
+                        2950.0,
+                        2900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んしゃししゅしぇしょsh.wav",
+                    "name": "n sh",
+                    "start": 740.0,
+                    "end": 1000.0,
+                    "points": [
+                        910.0,
+                        900.0,
+                        820.0,
+                        740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んしゃししゅしぇしょsh.wav",
+                    "name": "しゃ",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んしゃししゅしぇしょsh.wav",
+                    "name": "a sh",
+                    "start": 1240.0,
+                    "end": 1500.0,
+                    "points": [
+                        1410.0,
+                        1400.0,
+                        1320.0,
+                        1240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んしゃししゅしぇしょsh.wav",
+                    "name": "し",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んしゃししゅしぇしょsh.wav",
+                    "name": "i sh",
+                    "start": 1740.0,
+                    "end": 2000.0,
+                    "points": [
+                        1910.0,
+                        1900.0,
+                        1820.0,
+                        1740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んしゃししゅしぇしょsh.wav",
+                    "name": "しゅ",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んしゃししゅしぇしょsh.wav",
+                    "name": "u sh",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んしゃししゅしぇしょsh.wav",
+                    "name": "しぇ",
+                    "start": 2400.0,
+                    "end": 2820.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んしゃししゅしぇしょsh.wav",
+                    "name": "e sh",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んしゃししゅしぇしょsh.wav",
+                    "name": "しょ",
+                    "start": 2900.0,
+                    "end": 3420.0,
+                    "points": [
+                        3083.33,
+                        3000.0,
+                        2950.0,
+                        2900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んしゃししゅしぇしょsh.wav",
+                    "name": "o sh",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んじゃじじゅじぇじょj.wav",
+                    "name": "n j",
+                    "start": 740.0,
+                    "end": 1000.0,
+                    "points": [
+                        910.0,
+                        900.0,
+                        820.0,
+                        740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んじゃじじゅじぇじょj.wav",
+                    "name": "じゃ",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んじゃじじゅじぇじょj.wav",
+                    "name": "a j",
+                    "start": 1240.0,
+                    "end": 1500.0,
+                    "points": [
+                        1410.0,
+                        1400.0,
+                        1320.0,
+                        1240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んじゃじじゅじぇじょj.wav",
+                    "name": "じ",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んじゃじじゅじぇじょj.wav",
+                    "name": "i j",
+                    "start": 1740.0,
+                    "end": 2000.0,
+                    "points": [
+                        1910.0,
+                        1900.0,
+                        1820.0,
+                        1740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んじゃじじゅじぇじょj.wav",
+                    "name": "じゅ",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んじゃじじゅじぇじょj.wav",
+                    "name": "u j",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んじゃじじゅじぇじょj.wav",
+                    "name": "じぇ",
+                    "start": 2400.0,
+                    "end": 2820.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んじゃじじゅじぇじょj.wav",
+                    "name": "e j",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んじゃじじゅじぇじょj.wav",
+                    "name": "じょ",
+                    "start": 2900.0,
+                    "end": 3420.0,
+                    "points": [
+                        3083.33,
+                        3000.0,
+                        2950.0,
+                        2900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んじゃじじゅじぇじょj.wav",
+                    "name": "o j",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んたてぃとぅてとt.wav",
+                    "name": "n t",
+                    "start": 740.0,
+                    "end": 1000.0,
+                    "points": [
+                        910.0,
+                        900.0,
+                        820.0,
+                        740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んたてぃとぅてとt.wav",
+                    "name": "た",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んたてぃとぅてとt.wav",
+                    "name": "a t",
+                    "start": 1240.0,
+                    "end": 1500.0,
+                    "points": [
+                        1410.0,
+                        1400.0,
+                        1320.0,
+                        1240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んたてぃとぅてとt.wav",
+                    "name": "てぃ",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んたてぃとぅてとt.wav",
+                    "name": "i t",
+                    "start": 1740.0,
+                    "end": 2000.0,
+                    "points": [
+                        1910.0,
+                        1900.0,
+                        1820.0,
+                        1740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んたてぃとぅてとt.wav",
+                    "name": "とぅ",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んたてぃとぅてとt.wav",
+                    "name": "u t",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んたてぃとぅてとt.wav",
+                    "name": "て",
+                    "start": 2400.0,
+                    "end": 2820.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んたてぃとぅてとt.wav",
+                    "name": "e t",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んたてぃとぅてとt.wav",
+                    "name": "と",
+                    "start": 2900.0,
+                    "end": 3420.0,
+                    "points": [
+                        3083.33,
+                        3000.0,
+                        2950.0,
+                        2900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んたてぃとぅてとt.wav",
+                    "name": "o t",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んだでぃどぅでどd.wav",
+                    "name": "n d",
+                    "start": 740.0,
+                    "end": 1000.0,
+                    "points": [
+                        910.0,
+                        900.0,
+                        820.0,
+                        740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んだでぃどぅでどd.wav",
+                    "name": "だ",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んだでぃどぅでどd.wav",
+                    "name": "a d",
+                    "start": 1240.0,
+                    "end": 1500.0,
+                    "points": [
+                        1410.0,
+                        1400.0,
+                        1320.0,
+                        1240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んだでぃどぅでどd.wav",
+                    "name": "でぃ",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んだでぃどぅでどd.wav",
+                    "name": "i d",
+                    "start": 1740.0,
+                    "end": 2000.0,
+                    "points": [
+                        1910.0,
+                        1900.0,
+                        1820.0,
+                        1740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んだでぃどぅでどd.wav",
+                    "name": "どぅ",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んだでぃどぅでどd.wav",
+                    "name": "u d",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んだでぃどぅでどd.wav",
+                    "name": "で",
+                    "start": 2400.0,
+                    "end": 2820.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んだでぃどぅでどd.wav",
+                    "name": "e d",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んだでぃどぅでどd.wav",
+                    "name": "ど",
+                    "start": 2900.0,
+                    "end": 3420.0,
+                    "points": [
+                        3083.33,
+                        3000.0,
+                        2950.0,
+                        2900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んだでぃどぅでどd.wav",
+                    "name": "o d",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んちゃちちゅちぇちょch.wav",
+                    "name": "n ch",
+                    "start": 740.0,
+                    "end": 1000.0,
+                    "points": [
+                        910.0,
+                        900.0,
+                        820.0,
+                        740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んちゃちちゅちぇちょch.wav",
+                    "name": "ちゃ",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んちゃちちゅちぇちょch.wav",
+                    "name": "a ch",
+                    "start": 1240.0,
+                    "end": 1500.0,
+                    "points": [
+                        1410.0,
+                        1400.0,
+                        1320.0,
+                        1240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んちゃちちゅちぇちょch.wav",
+                    "name": "ち",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んちゃちちゅちぇちょch.wav",
+                    "name": "i ch",
+                    "start": 1740.0,
+                    "end": 2000.0,
+                    "points": [
+                        1910.0,
+                        1900.0,
+                        1820.0,
+                        1740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んちゃちちゅちぇちょch.wav",
+                    "name": "ちゅ",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んちゃちちゅちぇちょch.wav",
+                    "name": "u ch",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んちゃちちゅちぇちょch.wav",
+                    "name": "ちぇ",
+                    "start": 2400.0,
+                    "end": 2820.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んちゃちちゅちぇちょch.wav",
+                    "name": "e ch",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んちゃちちゅちぇちょch.wav",
+                    "name": "ちょ",
+                    "start": 2900.0,
+                    "end": 3420.0,
+                    "points": [
+                        3083.33,
+                        3000.0,
+                        2950.0,
+                        2900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んちゃちちゅちぇちょch.wav",
+                    "name": "o ch",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んつぁつぃつつぇつぉts.wav",
+                    "name": "n ts",
+                    "start": 740.0,
+                    "end": 1000.0,
+                    "points": [
+                        910.0,
+                        900.0,
+                        820.0,
+                        740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んつぁつぃつつぇつぉts.wav",
+                    "name": "つぁ",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んつぁつぃつつぇつぉts.wav",
+                    "name": "a ts",
+                    "start": 1240.0,
+                    "end": 1500.0,
+                    "points": [
+                        1410.0,
+                        1400.0,
+                        1320.0,
+                        1240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んつぁつぃつつぇつぉts.wav",
+                    "name": "つぃ",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んつぁつぃつつぇつぉts.wav",
+                    "name": "i ts",
+                    "start": 1740.0,
+                    "end": 2000.0,
+                    "points": [
+                        1910.0,
+                        1900.0,
+                        1820.0,
+                        1740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んつぁつぃつつぇつぉts.wav",
+                    "name": "つ",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んつぁつぃつつぇつぉts.wav",
+                    "name": "u ts",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んつぁつぃつつぇつぉts.wav",
+                    "name": "つぇ",
+                    "start": 2400.0,
+                    "end": 2820.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んつぁつぃつつぇつぉts.wav",
+                    "name": "e ts",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んつぁつぃつつぇつぉts.wav",
+                    "name": "つぉ",
+                    "start": 2900.0,
+                    "end": 3420.0,
+                    "points": [
+                        3083.33,
+                        3000.0,
+                        2950.0,
+                        2900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んつぁつぃつつぇつぉts.wav",
+                    "name": "o ts",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んなにぬねのneR吸.wav",
+                    "name": "n n",
+                    "start": 740.0,
+                    "end": 1000.0,
+                    "points": [
+                        910.0,
+                        900.0,
+                        820.0,
+                        740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んなにぬねのneR吸.wav",
+                    "name": "な",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んなにぬねのneR吸.wav",
+                    "name": "a n",
+                    "start": 1240.0,
+                    "end": 1500.0,
+                    "points": [
+                        1410.0,
+                        1400.0,
+                        1320.0,
+                        1240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んなにぬねのneR吸.wav",
+                    "name": "に",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んなにぬねのneR吸.wav",
+                    "name": "i n",
+                    "start": 1740.0,
+                    "end": 2000.0,
+                    "points": [
+                        1910.0,
+                        1900.0,
+                        1820.0,
+                        1740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んなにぬねのneR吸.wav",
+                    "name": "ぬ",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んなにぬねのneR吸.wav",
+                    "name": "u n",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んなにぬねのneR吸.wav",
+                    "name": "ね",
+                    "start": 2400.0,
+                    "end": 2820.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んなにぬねのneR吸.wav",
+                    "name": "e n",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んなにぬねのneR吸.wav",
+                    "name": "の",
+                    "start": 2900.0,
+                    "end": 3420.0,
+                    "points": [
+                        3083.33,
+                        3000.0,
+                        2950.0,
+                        2900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んなにぬねのneR吸.wav",
+                    "name": "o n",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んはひへほhoR吸.wav",
+                    "name": "n h",
+                    "start": 740.0,
+                    "end": 1000.0,
+                    "points": [
+                        910.0,
+                        900.0,
+                        820.0,
+                        740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んはひへほhoR吸.wav",
+                    "name": "は",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んはひへほhoR吸.wav",
+                    "name": "a h",
+                    "start": 1240.0,
+                    "end": 1500.0,
+                    "points": [
+                        1410.0,
+                        1400.0,
+                        1320.0,
+                        1240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んはひへほhoR吸.wav",
+                    "name": "ひ",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んはひへほhoR吸.wav",
+                    "name": "i h",
+                    "start": 1740.0,
+                    "end": 2000.0,
+                    "points": [
+                        1910.0,
+                        1900.0,
+                        1820.0,
+                        1740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んはひへほhoR吸.wav",
+                    "name": "へ",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んはひへほhoR吸.wav",
+                    "name": "e h",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んはひへほhoR吸.wav",
+                    "name": "ほ",
+                    "start": 2400.0,
+                    "end": 2920.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んはひへほhoR吸.wav",
+                    "name": "o h",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んばびぶべbiR吸.wav",
+                    "name": "n b",
+                    "start": 740.0,
+                    "end": 1000.0,
+                    "points": [
+                        910.0,
+                        900.0,
+                        820.0,
+                        740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んばびぶべbiR吸.wav",
+                    "name": "ば",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んばびぶべbiR吸.wav",
+                    "name": "a b",
+                    "start": 1240.0,
+                    "end": 1500.0,
+                    "points": [
+                        1410.0,
+                        1400.0,
+                        1320.0,
+                        1240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んばびぶべbiR吸.wav",
+                    "name": "び",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んばびぶべbiR吸.wav",
+                    "name": "i b",
+                    "start": 1740.0,
+                    "end": 2000.0,
+                    "points": [
+                        1910.0,
+                        1900.0,
+                        1820.0,
+                        1740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んばびぶべbiR吸.wav",
+                    "name": "ぶ",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んばびぶべbiR吸.wav",
+                    "name": "u b",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んばびぶべbiR吸.wav",
+                    "name": "べ",
+                    "start": 2400.0,
+                    "end": 2920.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んばびぶべbiR吸.wav",
+                    "name": "e b",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んばびぶべbiR吸.wav",
+                    "name": "ぼ",
+                    "start": 2400.0,
+                    "end": 2920.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んばびぶべbiR吸.wav",
+                    "name": "o b",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んぱぴぷぺぽpaR吸.wav",
+                    "name": "n p",
+                    "start": 740.0,
+                    "end": 1000.0,
+                    "points": [
+                        910.0,
+                        900.0,
+                        820.0,
+                        740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んぱぴぷぺぽpaR吸.wav",
+                    "name": "ぱ",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んぱぴぷぺぽpaR吸.wav",
+                    "name": "a p",
+                    "start": 1240.0,
+                    "end": 1500.0,
+                    "points": [
+                        1410.0,
+                        1400.0,
+                        1320.0,
+                        1240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んぱぴぷぺぽpaR吸.wav",
+                    "name": "ぴ",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んぱぴぷぺぽpaR吸.wav",
+                    "name": "i p",
+                    "start": 1740.0,
+                    "end": 2000.0,
+                    "points": [
+                        1910.0,
+                        1900.0,
+                        1820.0,
+                        1740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んぱぴぷぺぽpaR吸.wav",
+                    "name": "ぷ",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んぱぴぷぺぽpaR吸.wav",
+                    "name": "u p",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んぱぴぷぺぽpaR吸.wav",
+                    "name": "ぺ",
+                    "start": 2400.0,
+                    "end": 2820.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んぱぴぷぺぽpaR吸.wav",
+                    "name": "e p",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んぱぴぷぺぽpaR吸.wav",
+                    "name": "ぽ",
+                    "start": 2900.0,
+                    "end": 3420.0,
+                    "points": [
+                        3083.33,
+                        3000.0,
+                        2950.0,
+                        2900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んぱぴぷぺぽpaR吸.wav",
+                    "name": "o p",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んふぁふぃふふぇふぉf.wav",
+                    "name": "n f",
+                    "start": 740.0,
+                    "end": 1000.0,
+                    "points": [
+                        910.0,
+                        900.0,
+                        820.0,
+                        740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んふぁふぃふふぇふぉf.wav",
+                    "name": "ふぁ",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んふぁふぃふふぇふぉf.wav",
+                    "name": "a f",
+                    "start": 1240.0,
+                    "end": 1500.0,
+                    "points": [
+                        1410.0,
+                        1400.0,
+                        1320.0,
+                        1240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んふぁふぃふふぇふぉf.wav",
+                    "name": "ふぃ",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んふぁふぃふふぇふぉf.wav",
+                    "name": "i f",
+                    "start": 1740.0,
+                    "end": 2000.0,
+                    "points": [
+                        1910.0,
+                        1900.0,
+                        1820.0,
+                        1740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んふぁふぃふふぇふぉf.wav",
+                    "name": "ふ",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んふぁふぃふふぇふぉf.wav",
+                    "name": "u f",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んふぁふぃふふぇふぉf.wav",
+                    "name": "ふぇ",
+                    "start": 2400.0,
+                    "end": 2820.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んふぁふぃふふぇふぉf.wav",
+                    "name": "e f",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んふぁふぃふふぇふぉf.wav",
+                    "name": "ふぉ",
+                    "start": 2900.0,
+                    "end": 3420.0,
+                    "points": [
+                        3083.33,
+                        3000.0,
+                        2950.0,
+                        2900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んふぁふぃふふぇふぉf.wav",
+                    "name": "o f",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んまみむめもmuR吸.wav",
+                    "name": "n m",
+                    "start": 740.0,
+                    "end": 1000.0,
+                    "points": [
+                        910.0,
+                        900.0,
+                        820.0,
+                        740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んまみむめもmuR吸.wav",
+                    "name": "ま",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んまみむめもmuR吸.wav",
+                    "name": "a m",
+                    "start": 1240.0,
+                    "end": 1500.0,
+                    "points": [
+                        1410.0,
+                        1400.0,
+                        1320.0,
+                        1240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んまみむめもmuR吸.wav",
+                    "name": "み",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んまみむめもmuR吸.wav",
+                    "name": "i m",
+                    "start": 1740.0,
+                    "end": 2000.0,
+                    "points": [
+                        1910.0,
+                        1900.0,
+                        1820.0,
+                        1740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んまみむめもmuR吸.wav",
+                    "name": "む",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んまみむめもmuR吸.wav",
+                    "name": "u m",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んまみむめもmuR吸.wav",
+                    "name": "め",
+                    "start": 2400.0,
+                    "end": 2820.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んまみむめもmuR吸.wav",
+                    "name": "e m",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んまみむめもmuR吸.wav",
+                    "name": "も",
+                    "start": 2900.0,
+                    "end": 3420.0,
+                    "points": [
+                        3083.33,
+                        3000.0,
+                        2950.0,
+                        2900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んまみむめもmuR吸.wav",
+                    "name": "o m",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んらりるれろroR吸.wav",
+                    "name": "n r",
+                    "start": 740.0,
+                    "end": 1000.0,
+                    "points": [
+                        910.0,
+                        900.0,
+                        820.0,
+                        740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んらりるれろroR吸.wav",
+                    "name": "ら",
+                    "start": 900.0,
+                    "end": 1320.0,
+                    "points": [
+                        1083.33,
+                        1000.0,
+                        950.0,
+                        900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んらりるれろroR吸.wav",
+                    "name": "a r",
+                    "start": 1240.0,
+                    "end": 1500.0,
+                    "points": [
+                        1410.0,
+                        1400.0,
+                        1320.0,
+                        1240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んらりるれろroR吸.wav",
+                    "name": "り",
+                    "start": 1400.0,
+                    "end": 1820.0,
+                    "points": [
+                        1583.33,
+                        1500.0,
+                        1450.0,
+                        1400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んらりるれろroR吸.wav",
+                    "name": "i r",
+                    "start": 1740.0,
+                    "end": 2000.0,
+                    "points": [
+                        1910.0,
+                        1900.0,
+                        1820.0,
+                        1740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んらりるれろroR吸.wav",
+                    "name": "る",
+                    "start": 1900.0,
+                    "end": 2320.0,
+                    "points": [
+                        2083.33,
+                        2000.0,
+                        1950.0,
+                        1900.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んらりるれろroR吸.wav",
+                    "name": "u r",
+                    "start": 2240.0,
+                    "end": 2500.0,
+                    "points": [
+                        2410.0,
+                        2400.0,
+                        2320.0,
+                        2240.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んらりるれろroR吸.wav",
+                    "name": "れ",
+                    "start": 2400.0,
+                    "end": 2820.0,
+                    "points": [
+                        2583.33,
+                        2500.0,
+                        2450.0,
+                        2400.0
+                    ],
+                    "extras": [
+                        "-420"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んらりるれろroR吸.wav",
+                    "name": "e r",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んらりるれろroR吸.wav",
+                    "name": "ろ",
+                    "start": 2900.0,
+                    "end": 3420.0,
+                    "points": [
+                        3083.33,
+                        3000.0,
+                        2950.0,
+                        2900.0
+                    ],
+                    "extras": [
+                        "-520"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "CV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んらりるれろroR吸.wav",
+                    "name": "o r",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
+                    },
+                    "needSync": false
+                }
+            ],
+            "currentIndex": 32,
+            "extras": {
+            },
+            "rawFilePath": "oto.ini",
+            "entryFilter": null
+        }
+    ],
+    "currentModuleIndex": 0,
+    "autoExport": false,
+    "entryFilter": null
+}
