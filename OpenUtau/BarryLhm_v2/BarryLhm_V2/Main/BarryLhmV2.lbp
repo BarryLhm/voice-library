@@ -2704,16 +2704,16 @@
                 {
                     "sample": "_んあんいんうんえんおんR.wav",
                     "name": "n R",
-                    "start": 3380.4988,
-                    "end": 3646.5488,
+                    "start": 3380.5,
+                    "end": 3646.55,
                     "points": [
-                        3626.5488,
-                        3516.5532,
-                        3516.5532,
-                        3380.4988
+                        3626.55,
+                        3516.55,
+                        3516.55,
+                        3380.5
                     ],
                     "extras": [
-                        "-280.27"
+                        "-266.05"
                     ],
                     "notes": {
                         "done": true,
@@ -3712,16 +3712,16 @@
                 {
                     "sample": "_んざずぃずぜぞzeR.wav",
                     "name": "e R",
-                    "start": 3809.524,
+                    "start": 3809.52,
                     "end": 4061.97,
                     "points": [
                         4041.97,
                         3931.97,
                         3931.97,
-                        3809.524
+                        3809.52
                     ],
                     "extras": [
-                        "-237.93"
+                        "-252.45"
                     ],
                     "notes": {
                         "done": true,
@@ -5593,9 +5593,9 @@
                         "-199.68"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VC"
                     },
                     "needSync": false
                 },
@@ -5614,9 +5614,9 @@
                         "-447.17"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "CV"
                     },
                     "needSync": false
                 },
@@ -5635,9 +5635,9 @@
                         "-215.33"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VC"
                     },
                     "needSync": false
                 },
@@ -5656,9 +5656,9 @@
                         "-451.7"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "CV"
                     },
                     "needSync": false
                 },
@@ -5677,9 +5677,9 @@
                         "-212.61"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VC"
                     },
                     "needSync": false
                 },
@@ -5698,9 +5698,9 @@
                         "-438.1"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "CV"
                     },
                     "needSync": false
                 },
@@ -5719,9 +5719,9 @@
                         "-206.26"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VC"
                     },
                     "needSync": false
                 },
@@ -5740,9 +5740,9 @@
                         "-450.79"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "CV"
                     },
                     "needSync": false
                 },
@@ -5761,9 +5761,9 @@
                         "-221.68"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VC"
                     },
                     "needSync": false
                 },
@@ -5782,9 +5782,9 @@
                         "-483.45"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "CV"
                     },
                     "needSync": false
                 },
@@ -5803,9 +5803,9 @@
                         "-231.66"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VC"
                     },
                     "needSync": false
                 },
@@ -5824,7 +5824,28 @@
                         "-579.25"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
+                        "star": false,
+                        "tag": "Tail"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んばびぶべぼbiR吸.wav",
+                    "name": "br",
+                    "start": 4117.91,
+                    "end": 4435.37,
+                    "points": [
+                        4273.92,
+                        4117.91,
+                        4117.91,
+                        4117.91
+                    ],
+                    "extras": [
+                        "-317.46"
+                    ],
+                    "notes": {
+                        "done": true,
                         "star": false,
                         "tag": ""
                     },
@@ -6816,30 +6837,9 @@
                         "tag": "Tail"
                     },
                     "needSync": false
-                },
-                {
-                    "sample": "_んらりるれろroR吸br.wav",
-                    "name": "br",
-                    "start": 3377.78,
-                    "end": 3636.28,
-                    "points": [
-                        3508.39,
-                        3377.78,
-                        3382.78,
-                        3377.78
-                    ],
-                    "extras": [
-                        "-258.5"
-                    ],
-                    "notes": {
-                        "done": true,
-                        "star": false,
-                        "tag": "Solo V"
-                    },
-                    "needSync": false
                 }
             ],
-            "currentIndex": 95,
+            "currentIndex": 0,
             "extras": {
             },
             "rawFilePath": "oto.ini",
@@ -6848,10 +6848,5 @@
     ],
     "currentModuleIndex": 0,
     "autoExport": false,
-    "entryFilter": {
-        "searchText": "tag:Tail",
-        "star": null,
-        "done": null,
-        "advanced": null
-    }
+    "entryFilter": null
 }
