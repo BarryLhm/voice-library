@@ -1675,16 +1675,16 @@
                 {
                     "sample": "_やゆいぇよてゅnR吸.wav",
                     "name": "n R吸",
-                    "start": 5679.2515,
-                    "end": 6260.3174,
+                    "start": 5679.25,
+                    "end": 6260.32,
                     "points": [
-                        6238.549,
-                        5929.2515,
-                        5929.2515,
-                        5679.2515
+                        6238.55,
+                        5929.25,
+                        5929.25,
+                        5679.25
                     ],
                     "extras": [
-                        "-637.64"
+                        "-581.07"
                     ],
                     "notes": {
                         "done": true,
@@ -2372,12 +2372,12 @@
                     "end": 3720.93,
                     "points": [
                         3700.93,
-                        3590.9297,
-                        3590.9297,
+                        3590.93,
+                        3590.93,
                         3340.93
                     ],
                     "extras": [
-                        "-197.19"
+                        "-380"
                     ],
                     "notes": {
                         "done": true,
@@ -2620,16 +2620,16 @@
                 {
                     "sample": "_んがぎぐげごgiR.wav",
                     "name": "i R",
-                    "start": 3587.6445,
-                    "end": 3967.6445,
+                    "start": 3587.64,
+                    "end": 3967.64,
                     "points": [
-                        3947.6445,
-                        3837.6416,
-                        3837.6416,
-                        3587.6445
+                        3947.64,
+                        3837.64,
+                        3837.64,
+                        3587.64
                     ],
                     "extras": [
-                        "-208.07"
+                        "-380"
                     ],
                     "notes": {
                         "done": true,
@@ -2872,16 +2872,16 @@
                 {
                     "sample": "_んさすぃすせそsuR.wav",
                     "name": "u R",
-                    "start": 3805.329,
-                    "end": 4185.329,
+                    "start": 3805.33,
+                    "end": 4185.33,
                     "points": [
-                        4165.328,
-                        4055.3289,
-                        4055.3289,
-                        3805.329
+                        4165.33,
+                        4055.33,
+                        4055.33,
+                        3805.33
                     ],
                     "extras": [
-                        "-301.5"
+                        "-380"
                     ],
                     "notes": {
                         "done": true,
@@ -3124,16 +3124,16 @@
                 {
                     "sample": "_んざずぃずぜぞzeR.wav",
                     "name": "e R",
-                    "start": 3681.973,
-                    "end": 4061.973,
+                    "start": 3681.97,
+                    "end": 4061.97,
                     "points": [
-                        4041.973,
-                        3931.973,
-                        3931.973,
-                        3681.973
+                        4041.97,
+                        3931.97,
+                        3931.97,
+                        3681.97
                     ],
                     "extras": [
-                        "-173.47"
+                        "-380"
                     ],
                     "notes": {
                         "done": true,
@@ -4796,7 +4796,7 @@
                     ],
                     "notes": {
                         "done": false,
-                        "star": false,
+                        "star": true,
                         "tag": "VC"
                     },
                     "needSync": false
@@ -4985,7 +4985,7 @@
                     ],
                     "notes": {
                         "done": false,
-                        "star": false,
+                        "star": true,
                         "tag": "Tail"
                     },
                     "needSync": false
@@ -5978,7 +5978,7 @@
                     "needSync": false
                 },
                 {
-                    "sample": "_んらりるれろroR吸.wav",
+                    "sample": "_んらりるれろroR吸br.wav",
                     "name": "n r",
                     "start": 740.0,
                     "end": 1000.0,
@@ -5994,12 +5994,12 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": "VC"
+                        "tag": ""
                     },
                     "needSync": false
                 },
                 {
-                    "sample": "_んらりるれろroR吸.wav",
+                    "sample": "_んらりるれろroR吸br.wav",
                     "name": "ら",
                     "start": 900.0,
                     "end": 1320.0,
@@ -6015,12 +6015,12 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": "CV"
+                        "tag": ""
                     },
                     "needSync": false
                 },
                 {
-                    "sample": "_んらりるれろroR吸.wav",
+                    "sample": "_んらりるれろroR吸br.wav",
                     "name": "a r",
                     "start": 1240.0,
                     "end": 1500.0,
@@ -6036,12 +6036,12 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": "VC"
+                        "tag": ""
                     },
                     "needSync": false
                 },
                 {
-                    "sample": "_んらりるれろroR吸.wav",
+                    "sample": "_んらりるれろroR吸br.wav",
                     "name": "り",
                     "start": 1400.0,
                     "end": 1820.0,
@@ -6057,12 +6057,12 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": "CV"
+                        "tag": ""
                     },
                     "needSync": false
                 },
                 {
-                    "sample": "_んらりるれろroR吸.wav",
+                    "sample": "_んらりるれろroR吸br.wav",
                     "name": "i r",
                     "start": 1740.0,
                     "end": 2000.0,
@@ -6078,12 +6078,12 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": "VC"
+                        "tag": ""
                     },
                     "needSync": false
                 },
                 {
-                    "sample": "_んらりるれろroR吸.wav",
+                    "sample": "_んらりるれろroR吸br.wav",
                     "name": "る",
                     "start": 1900.0,
                     "end": 2320.0,
@@ -6099,12 +6099,12 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": "CV"
+                        "tag": ""
                     },
                     "needSync": false
                 },
                 {
-                    "sample": "_んらりるれろroR吸.wav",
+                    "sample": "_んらりるれろroR吸br.wav",
                     "name": "u r",
                     "start": 2240.0,
                     "end": 2500.0,
@@ -6120,12 +6120,12 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": "VC"
+                        "tag": ""
                     },
                     "needSync": false
                 },
                 {
-                    "sample": "_んらりるれろroR吸.wav",
+                    "sample": "_んらりるれろroR吸br.wav",
                     "name": "れ",
                     "start": 2400.0,
                     "end": 2820.0,
@@ -6141,12 +6141,12 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": "CV"
+                        "tag": ""
                     },
                     "needSync": false
                 },
                 {
-                    "sample": "_んらりるれろroR吸.wav",
+                    "sample": "_んらりるれろroR吸br.wav",
                     "name": "e r",
                     "start": 2740.0,
                     "end": 3000.0,
@@ -6162,12 +6162,12 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": "VC"
+                        "tag": ""
                     },
                     "needSync": false
                 },
                 {
-                    "sample": "_んらりるれろroR吸.wav",
+                    "sample": "_んらりるれろroR吸br.wav",
                     "name": "ろ",
                     "start": 2900.0,
                     "end": 3420.0,
@@ -6183,12 +6183,12 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": "CV"
+                        "tag": ""
                     },
                     "needSync": false
                 },
                 {
-                    "sample": "_んらりるれろroR吸.wav",
+                    "sample": "_んらりるれろroR吸br.wav",
                     "name": "o r",
                     "start": 2740.0,
                     "end": 3000.0,
@@ -6204,12 +6204,12 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": "VC"
+                        "tag": ""
                     },
                     "needSync": false
                 },
                 {
-                    "sample": "_んらりるれろroR吸.wav",
+                    "sample": "_んらりるれろroR吸br.wav",
                     "name": "o R吸",
                     "start": 2740.0,
                     "end": 3000.0,
@@ -6225,12 +6225,33 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": "Tail"
+                        "tag": ""
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_んらりるれろroR吸br.wav",
+                    "name": "br",
+                    "start": 2740.0,
+                    "end": 3000.0,
+                    "points": [
+                        2910.0,
+                        2900.0,
+                        2820.0,
+                        2740.0
+                    ],
+                    "extras": [
+                        "-260"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": ""
                     },
                     "needSync": false
                 }
             ],
-            "currentIndex": 182,
+            "currentIndex": 0,
             "extras": {
             },
             "rawFilePath": "oto.ini",
