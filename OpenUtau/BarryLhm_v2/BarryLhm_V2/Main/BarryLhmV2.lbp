@@ -814,113 +814,176 @@
                 {
                     "sample": "_あいうえおあ.wav",
                     "name": "a い",
-                    "start": 0.0,
-                    "end": 2720.0,
+                    "start": 548.7528,
+                    "end": 933.3333,
                     "points": [
-                        0.0,
-                        0.0,
-                        0.0,
-                        0.0
+                        663.94556,
+                        643.9909,
+                        643.9909,
+                        548.7528
                     ],
                     "extras": [
-                        "0"
+                        "-2720"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_あいうえおあ.wav",
+                    "name": "a y",
+                    "start": 421.41003,
+                    "end": 642.1769,
+                    "points": [
+                        590.4762,
+                        581.4059,
+                        501.41006,
+                        421.41003
+                    ],
+                    "extras": [
+                        "-2720"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "VC"
                     },
                     "needSync": false
                 },
                 {
                     "sample": "_あいうえおあ.wav",
                     "name": "i う",
-                    "start": 0.0,
-                    "end": 2720.0,
+                    "start": 940.5896,
+                    "end": 1344.2177,
                     "points": [
-                        0.0,
-                        0.0,
-                        0.0,
-                        0.0
+                        1032.1996,
+                        1015.873,
+                        1015.873,
+                        940.5896
                     ],
                     "extras": [
-                        "0"
+                        "-2720"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_あいうえおあ.wav",
+                    "name": "i w",
+                    "start": 787.84564,
+                    "end": 1022.2222,
+                    "points": [
+                        965.07935,
+                        947.8458,
+                        867.8458,
+                        787.84564
+                    ],
+                    "extras": [
+                        "-2720"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "VC"
                     },
                     "needSync": false
                 },
                 {
                     "sample": "_あいうえおあ.wav",
                     "name": "u え",
-                    "start": 0.0,
-                    "end": 2720.0,
+                    "start": 1334.2404,
+                    "end": 1735.1473,
                     "points": [
-                        0.0,
-                        0.0,
-                        0.0,
-                        0.0
+                        1438.5487,
+                        1397.7324,
+                        1397.7324,
+                        1334.2404
                     ],
                     "extras": [
-                        "0"
+                        "-2720"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VV"
                     },
                     "needSync": false
                 },
                 {
                     "sample": "_あいうえおあ.wav",
                     "name": "e お",
-                    "start": 0.0,
-                    "end": 2720.0,
+                    "start": 1732.4263,
+                    "end": 2071.6553,
                     "points": [
-                        0.0,
-                        0.0,
-                        0.0,
-                        0.0
+                        1820.4082,
+                        1798.6394,
+                        1798.6394,
+                        1732.4263
                     ],
                     "extras": [
-                        "0"
+                        "-2720"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VV"
                     },
                     "needSync": false
                 },
                 {
                     "sample": "_あいうえおあ.wav",
                     "name": "o あ",
-                    "start": 0.0,
-                    "end": 2720.0,
+                    "start": 2058.957,
+                    "end": 2459.864,
                     "points": [
-                        0.0,
-                        0.0,
-                        0.0,
-                        0.0
+                        2160.5442,
+                        2150.567,
+                        2150.567,
+                        2058.957
                     ],
                     "extras": [
-                        "0"
+                        "-2720"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VV"
                     },
                     "needSync": false
                 },
                 {
                     "sample": "_あうおいえあ.wav",
                     "name": "a う",
+                    "start": 907.0295,
+                    "end": 1321.542,
+                    "points": [
+                        1027.6644,
+                        1017.6871,
+                        1017.6871,
+                        907.0295
+                    ],
+                    "extras": [
+                        "0"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": true,
+                        "tag": "VV"
+                    },
+                    "needSync": false
+                },
+                {
+                    "sample": "_あうおいえあ.wav",
+                    "name": "a w",
                     "start": 0.0,
-                    "end": 0.0,
+                    "end": 3280.0,
                     "points": [
                         0.0,
                         0.0,
@@ -933,15 +996,15 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": ""
+                        "tag": "VC"
                     },
-                    "needSync": true
+                    "needSync": false
                 },
                 {
                     "sample": "_あうおいえあ.wav",
                     "name": "u お",
                     "start": 0.0,
-                    "end": 0.0,
+                    "end": 3280.0,
                     "points": [
                         0.0,
                         0.0,
@@ -954,15 +1017,15 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": ""
+                        "tag": "VV"
                     },
-                    "needSync": true
+                    "needSync": false
                 },
                 {
                     "sample": "_あうおいえあ.wav",
                     "name": "o い",
                     "start": 0.0,
-                    "end": 0.0,
+                    "end": 3280.0,
                     "points": [
                         0.0,
                         0.0,
@@ -975,15 +1038,36 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": ""
+                        "tag": "VV"
                     },
-                    "needSync": true
+                    "needSync": false
+                },
+                {
+                    "sample": "_あうおいえあ.wav",
+                    "name": "o y",
+                    "start": 0.0,
+                    "end": 3280.0,
+                    "points": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "extras": [
+                        "0"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
                 },
                 {
                     "sample": "_あうおいえあ.wav",
                     "name": "i え",
                     "start": 0.0,
-                    "end": 0.0,
+                    "end": 3280.0,
                     "points": [
                         0.0,
                         0.0,
@@ -996,15 +1080,15 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": ""
+                        "tag": "VV"
                     },
-                    "needSync": true
+                    "needSync": false
                 },
                 {
                     "sample": "_あうおいえあ.wav",
                     "name": "e あ",
                     "start": 0.0,
-                    "end": 0.0,
+                    "end": 3280.0,
                     "points": [
                         0.0,
                         0.0,
@@ -1016,16 +1100,16 @@
                     ],
                     "notes": {
                         "done": false,
-                        "star": false,
-                        "tag": ""
+                        "star": true,
+                        "tag": "VV"
                     },
-                    "needSync": true
+                    "needSync": false
                 },
                 {
                     "sample": "_あえいおうあ.wav",
                     "name": "a え",
                     "start": 0.0,
-                    "end": 0.0,
+                    "end": 3360.0,
                     "points": [
                         0.0,
                         0.0,
@@ -1037,16 +1121,16 @@
                     ],
                     "notes": {
                         "done": false,
-                        "star": false,
-                        "tag": ""
+                        "star": true,
+                        "tag": "VV"
                     },
-                    "needSync": true
+                    "needSync": false
                 },
                 {
                     "sample": "_あえいおうあ.wav",
                     "name": "e い",
                     "start": 0.0,
-                    "end": 0.0,
+                    "end": 3360.0,
                     "points": [
                         0.0,
                         0.0,
@@ -1059,15 +1143,36 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": ""
+                        "tag": "VV"
                     },
-                    "needSync": true
+                    "needSync": false
+                },
+                {
+                    "sample": "_あえいおうあ.wav",
+                    "name": "e y",
+                    "start": 0.0,
+                    "end": 3360.0,
+                    "points": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "extras": [
+                        "0"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
                 },
                 {
                     "sample": "_あえいおうあ.wav",
                     "name": "i お",
                     "start": 0.0,
-                    "end": 0.0,
+                    "end": 3360.0,
                     "points": [
                         0.0,
                         0.0,
@@ -1080,15 +1185,15 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": ""
+                        "tag": "VV"
                     },
-                    "needSync": true
+                    "needSync": false
                 },
                 {
                     "sample": "_あえいおうあ.wav",
                     "name": "o う",
                     "start": 0.0,
-                    "end": 0.0,
+                    "end": 3360.0,
                     "points": [
                         0.0,
                         0.0,
@@ -1101,15 +1206,36 @@
                     "notes": {
                         "done": false,
                         "star": false,
-                        "tag": ""
+                        "tag": "VV"
                     },
-                    "needSync": true
+                    "needSync": false
+                },
+                {
+                    "sample": "_あえいおうあ.wav",
+                    "name": "o w",
+                    "start": 0.0,
+                    "end": 3360.0,
+                    "points": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "extras": [
+                        "0"
+                    ],
+                    "notes": {
+                        "done": false,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
                 },
                 {
                     "sample": "_あえいおうあ.wav",
                     "name": "u あ",
                     "start": 0.0,
-                    "end": 0.0,
+                    "end": 3360.0,
                     "points": [
                         0.0,
                         0.0,
@@ -1121,115 +1247,157 @@
                     ],
                     "notes": {
                         "done": false,
-                        "star": false,
-                        "tag": ""
+                        "star": true,
+                        "tag": "VV"
                     },
-                    "needSync": true
+                    "needSync": false
                 },
                 {
                     "sample": "_あおえういあ.wav",
                     "name": "a お",
-                    "start": 0.0,
-                    "end": 0.0,
+                    "start": 777.3243,
+                    "end": 1287.9818,
                     "points": [
-                        0.0,
-                        0.0,
-                        0.0,
-                        0.0
+                        891.61,
+                        882.5397,
+                        882.5397,
+                        777.3243
                     ],
                     "extras": [
                         "0"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VV"
                     },
-                    "needSync": true
+                    "needSync": false
                 },
                 {
                     "sample": "_あおえういあ.wav",
                     "name": "o え",
-                    "start": 0.0,
-                    "end": 0.0,
+                    "start": 1284.3538,
+                    "end": 1700.6803,
                     "points": [
-                        0.0,
-                        0.0,
-                        0.0,
-                        0.0
+                        1396.8254,
+                        1381.4059,
+                        1381.4059,
+                        1284.3538
                     ],
                     "extras": [
                         "0"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VV"
                     },
-                    "needSync": true
+                    "needSync": false
                 },
                 {
                     "sample": "_あおえういあ.wav",
                     "name": "e う",
-                    "start": 0.0,
-                    "end": 0.0,
+                    "start": 1701.5873,
+                    "end": 2158.7302,
                     "points": [
-                        0.0,
-                        0.0,
-                        0.0,
-                        0.0
+                        1775.9637,
+                        1757.8231,
+                        1757.8231,
+                        1701.5873
                     ],
                     "extras": [
                         "0"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VV"
                     },
-                    "needSync": true
+                    "needSync": false
+                },
+                {
+                    "sample": "_あおえういあ.wav",
+                    "name": "e w",
+                    "start": 1550.0,
+                    "end": 1779.5918,
+                    "points": [
+                        1733.3334,
+                        1724.2631,
+                        1644.26,
+                        1564.26
+                    ],
+                    "extras": [
+                        "0"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
                 },
                 {
                     "sample": "_あおえういあ.wav",
                     "name": "u い",
-                    "start": 0.0,
-                    "end": 0.0,
+                    "start": 2135.1475,
+                    "end": 2570.5215,
                     "points": [
-                        0.0,
-                        0.0,
-                        0.0,
-                        0.0
+                        2235.8276,
+                        2208.6167,
+                        2208.6167,
+                        2135.1475
                     ],
                     "extras": [
                         "0"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VV"
                     },
-                    "needSync": true
+                    "needSync": false
+                },
+                {
+                    "sample": "_あおえういあ.wav",
+                    "name": "u y",
+                    "start": 1982.4039,
+                    "end": 2205.8958,
+                    "points": [
+                        2153.288,
+                        2142.4036,
+                        2062.4038,
+                        1982.4039
+                    ],
+                    "extras": [
+                        "0"
+                    ],
+                    "notes": {
+                        "done": true,
+                        "star": false,
+                        "tag": "VC"
+                    },
+                    "needSync": false
                 },
                 {
                     "sample": "_あおえういあ.wav",
                     "name": "i あ",
-                    "start": 0.0,
-                    "end": 0.0,
+                    "start": 2574.1497,
+                    "end": 3017.687,
                     "points": [
-                        0.0,
-                        0.0,
-                        0.0,
-                        0.0
+                        2689.3423,
+                        2662.1316,
+                        2662.1316,
+                        2574.1497
                     ],
                     "extras": [
                         "0"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VV"
                     },
-                    "needSync": true
+                    "needSync": false
                 },
                 {
                     "sample": "_きゃきゅきぇきょ.wav",
@@ -6400,299 +6568,278 @@
                 {
                     "sample": "_んらりるれろroR吸br.wav",
                     "name": "n r",
-                    "start": 635.46,
-                    "end": 869.84,
+                    "start": 469.48,
+                    "end": 703.86,
                     "points": [
-                        822.68,
-                        795.46,
-                        715.46,
-                        635.46
+                        656.7,
+                        629.48,
+                        549.48,
+                        469.48
                     ],
                     "extras": [
                         "-234.38"
                     ],
                     "notes": {
-                        "done": false,
-                        "star": true,
-                        "tag": ""
+                        "done": true,
+                        "star": false,
+                        "tag": "VC"
                     },
                     "needSync": false
                 },
                 {
                     "sample": "_んらりるれろroR吸br.wav",
                     "name": "ら",
-                    "start": 852.61,
-                    "end": 1320.64,
+                    "start": 692.97,
+                    "end": 1041.27,
                     "points": [
-                        920.64,
-                        868.03,
-                        868.03,
-                        852.61
+                        756.46,
+                        708.39,
+                        708.39,
+                        692.97
                     ],
                     "extras": [
-                        "-468.03"
+                        "-348.3"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "CV"
                     },
                     "needSync": false
                 },
                 {
                     "sample": "_んらりるれろroR吸br.wav",
                     "name": "a r",
-                    "start": 1179.68,
-                    "end": 1428.57,
+                    "start": 913.02,
+                    "end": 1143.77,
                     "points": [
-                        1356.91,
-                        1339.68,
-                        1259.68,
-                        1179.68
+                        1085.72,
+                        1073.02,
+                        993.02,
+                        913.02
                     ],
                     "extras": [
-                        "-248.89"
+                        "-230.75"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VC"
                     },
                     "needSync": false
                 },
                 {
                     "sample": "_んらりるれろroR吸br.wav",
                     "name": "り",
-                    "start": 1413.15,
-                    "end": 1892.97,
+                    "start": 1131.07,
+                    "end": 1506.58,
                     "points": [
-                        1503.85,
-                        1427.66,
-                        1427.66,
-                        1413.15
+                        1177.33,
+                        1145.58,
+                        1145.58,
+                        1131.07
                     ],
                     "extras": [
-                        "-479.82"
+                        "-375.51"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "CV"
                     },
                     "needSync": false
                 },
                 {
                     "sample": "_んらりるれろroR吸br.wav",
                     "name": "i r",
-                    "start": 1755.65,
-                    "end": 2030.84,
+                    "start": 1381.95,
+                    "end": 1611.79,
                     "points": [
-                        1942.86,
-                        1915.65,
-                        1835.65,
-                        1755.65
+                        1553.74,
+                        1541.95,
+                        1461.95,
+                        1381.95
                     ],
                     "extras": [
-                        "-275.19"
+                        "-229.84"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VC"
                     },
                     "needSync": false
                 },
                 {
                     "sample": "_んらりるれろroR吸br.wav",
                     "name": "る",
-                    "start": 2023.58,
-                    "end": 2506.12,
+                    "start": 1598.19,
+                    "end": 1936.51,
                     "points": [
-                        2078.0,
-                        2035.37,
-                        2035.37,
-                        2023.58
+                        1643.54,
+                        1609.98,
+                        1609.98,
+                        1598.19
                     ],
                     "extras": [
-                        "-482.54"
+                        "-338.32"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "CV"
                     },
                     "needSync": false
                 },
                 {
                     "sample": "_んらりるれろroR吸br.wav",
                     "name": "u r",
-                    "start": 2377.87,
-                    "end": 2628.57,
+                    "start": 1784.67,
+                    "end": 2035.37,
                     "points": [
-                        2561.45,
-                        2537.87,
-                        2457.87,
-                        2377.87
+                        1968.25,
+                        1944.67,
+                        1864.67,
+                        1784.67
                     ],
                     "extras": [
                         "-250.7"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VC"
                     },
                     "needSync": false
                 },
                 {
                     "sample": "_んらりるれろroR吸br.wav",
                     "name": "れ",
-                    "start": 2400.0,
-                    "end": 2820.0,
+                    "start": 2026.3,
+                    "end": 2390.02,
                     "points": [
-                        2583.33,
-                        2500.0,
-                        2450.0,
-                        2400.0
+                        2069.84,
+                        2039.91,
+                        2039.91,
+                        2026.3
                     ],
                     "extras": [
-                        "-420"
+                        "-363.72"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "CV"
                     },
                     "needSync": false
                 },
                 {
                     "sample": "_んらりるれろroR吸br.wav",
                     "name": "e r",
-                    "start": 2740.0,
-                    "end": 3000.0,
+                    "start": 2252.7,
+                    "end": 2486.17,
                     "points": [
-                        2910.0,
-                        2900.0,
-                        2820.0,
-                        2740.0
+                        2426.31,
+                        2412.7,
+                        2332.7,
+                        2252.7
                     ],
                     "extras": [
-                        "-260"
+                        "-233.47"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VC"
                     },
                     "needSync": false
                 },
                 {
                     "sample": "_んらりるれろroR吸br.wav",
                     "name": "ろ",
-                    "start": 2900.0,
-                    "end": 3420.0,
+                    "start": 2475.28,
+                    "end": 2861.67,
                     "points": [
-                        3083.33,
-                        3000.0,
-                        2950.0,
-                        2900.0
+                        2538.77,
+                        2487.98,
+                        2487.98,
+                        2475.28
                     ],
                     "extras": [
-                        "-520"
+                        "-386.39"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "CV"
                     },
                     "needSync": false
                 },
                 {
                     "sample": "_んらりるれろroR吸br.wav",
                     "name": "o r",
-                    "start": 2740.0,
-                    "end": 3000.0,
+                    "start": 2715.28,
+                    "end": 2950.56,
                     "points": [
-                        2910.0,
-                        2900.0,
-                        2820.0,
-                        2740.0
+                        2885.28,
+                        2875.28,
+                        2795.28,
+                        2715.28
                     ],
                     "extras": [
-                        "-260"
+                        "-235.28"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "VC"
                     },
                     "needSync": false
                 },
                 {
                     "sample": "_んらりるれろroR吸br.wav",
                     "name": "o R吸",
-                    "start": 2740.0,
-                    "end": 3000.0,
+                    "start": 3062.47,
+                    "end": 3633.56,
                     "points": [
-                        2910.0,
-                        2900.0,
-                        2820.0,
-                        2740.0
+                        3611.79,
+                        3312.47,
+                        3312.47,
+                        3062.47
                     ],
                     "extras": [
-                        "-260"
+                        "-571.09"
                     ],
                     "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "Tail"
                     },
                     "needSync": false
                 },
                 {
                     "sample": "_んらりるれろroR吸br.wav",
                     "name": "br",
-                    "start": 2740.0,
-                    "end": 3000.0,
+                    "start": 3377.78,
+                    "end": 3636.28,
                     "points": [
-                        2910.0,
-                        2900.0,
-                        2820.0,
-                        2740.0
+                        3508.39,
+                        3377.78,
+                        3377.78,
+                        3377.78
                     ],
                     "extras": [
-                        "-260"
+                        "-258.5"
                     ],
                     "notes": {
-                        "done": false,
-                        "star": true,
-                        "tag": ""
-                    },
-                    "needSync": false
-                },
-                {
-                    "sample": "_んらりるれろroR吸br.wav",
-                    "name": "a i",
-                    "start": 2740.0,
-                    "end": 3000.0,
-                    "points": [
-                        2910.0,
-                        2900.0,
-                        2820.0,
-                        2740.0
-                    ],
-                    "extras": [
-                        "-260"
-                    ],
-                    "notes": {
-                        "done": false,
+                        "done": true,
                         "star": false,
-                        "tag": ""
+                        "tag": "Solo V"
                     },
                     "needSync": false
                 }
             ],
-            "currentIndex": 65,
+            "currentIndex": 32,
             "extras": {
             },
             "rawFilePath": "oto.ini",
