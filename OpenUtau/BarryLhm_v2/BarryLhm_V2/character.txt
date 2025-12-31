@@ -2,7 +2,7 @@ name=BarryLhm V2
 image=avatar.png
 sample=Main\_わうぃうぇうぉでゅ.wav
 web=https://codeberg.org/BarryLhm/voice-library
-releasedate=202x-xx-xx
+releasedate=2025-12-31
 
 BarryLhm vocal library 2.0
 (C) BarryLhm 2025-2026 All Rights Reserved.
